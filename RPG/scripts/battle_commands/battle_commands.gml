@@ -45,6 +45,8 @@ function attack_magical(attacker, attack_object, target_array){
 		}
 		
 		target_array[i].hp -= attacker.damage * attack_object.damage_multiplier * weakness_mult;
+		show_debug_message("battle_commands Line 48: Attack_object cost: " + string(attack_object.cost));
+		show_debug_message("battle_commands Line 49: Attacker Elemental Energy: " + string(attack_object.cost));
 		elemental_chance_magic(attack_object.element, target_array[i]);
 		
 		if(target_array[i].name = obj_player_battle.name){

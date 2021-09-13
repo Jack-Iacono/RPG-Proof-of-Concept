@@ -18,6 +18,7 @@ if(turn){
 	
 	//Applies status over turns
 	for(i = 0; i < array_length(status_array); i++){
+		show_debug_message("Engage elemental effect");
 		elemental_effect(status_array[i], self.id);
 		turn_array[i] -= 1;
 	}

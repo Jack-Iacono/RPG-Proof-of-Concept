@@ -29,7 +29,7 @@ function elemental_chance(element, target){
 			
 		}
 	}else{
-			if(random(100) < element.chance / (instance_number(obj_enemy_battle) * 1.66)){
+			if(random(100) < element.chance){
 			
 			for(j = 0; j < array_length(target.status_array); j++){
 				if(target.status_array[j].name = element.name){

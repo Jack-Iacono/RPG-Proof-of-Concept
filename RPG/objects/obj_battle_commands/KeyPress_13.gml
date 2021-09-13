@@ -31,7 +31,7 @@ switch(section){
 				break;
 			case 1:
 				section = 3;
-				attack_object = obj_attack_magical;
+				attack_type = obj_attack_magical;
 				break;
 			case 2:
 				section = 0;
@@ -60,6 +60,8 @@ switch(section){
 	case 3:
 		//Decides whihc magical attack you will use
 		if(cursor_opt < array_length(magic) - 1){
+			
+			attack_object = magic[cursor_opt];
 			
 			//Decides how many Enemies can be targetted
 			selections = attack_object.targets;
@@ -117,19 +119,20 @@ switch(section){
 			
 			if(array_length(target_array) >= selections){
 				
-				
 				if(attack_type == obj_attack_physical){
 				
 					attack_physical(obj_player_battle, attack_object, target_array);
 				
 				}else if(attack_type == obj_attack_magical){
-					
+					show_debug_message("Before Magic Check");
 					if(obj_player_battle.elemental_energy >= attack_object.cost){
-						attack_magical(obj_player_battle, enemy[cursor_opt], attack_object);
+						show_debug_message("Passed Magic Check");
+						attack_magical(obj_player_battle, attack_object, target_array);
 					}else{
 						array_push(obj_pop_up.status_text, "Player doesn't have enough energy");
 						array_push(obj_pop_up.text_alpha, 1);
 					}
+					
 				}
 				array_delete(target_array, 0, array_length(target_array));
 				end_turn();
