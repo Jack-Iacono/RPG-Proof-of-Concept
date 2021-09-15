@@ -26,6 +26,7 @@
     {"id":{"name":"spr_slime","path":"sprites/spr_slime/spr_slime.yy",},"order":0,},
     {"id":{"name":"spr_enemy","path":"sprites/spr_enemy/spr_enemy.yy",},"order":0,},
     {"id":{"name":"obj_attack_magical","path":"objects/obj_attack_magical/obj_attack_magical.yy",},"order":0,},
+    {"id":{"name":"attack_ethereal_knife","path":"objects/attack_ethereal_knife/attack_ethereal_knife.yy",},"order":3,},
     {"id":{"name":"spr_player_backwards","path":"sprites/spr_player_backwards/spr_player_backwards.yy",},"order":4,},
     {"id":{"name":"element_poison","path":"objects/element_poison/element_poison.yy",},"order":4,},
     {"id":{"name":"font_menu","path":"fonts/font_menu/font_menu.yy",},"order":1,},

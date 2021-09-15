@@ -124,9 +124,7 @@ switch(section){
 					attack_physical(obj_player_battle, attack_object, target_array);
 				
 				}else if(attack_type == obj_attack_magical){
-					show_debug_message("Before Magic Check");
 					if(obj_player_battle.elemental_energy >= attack_object.cost){
-						show_debug_message("Passed Magic Check");
 						attack_magical(obj_player_battle, attack_object, target_array);
 					}else{
 						array_push(obj_pop_up.status_text, "Player doesn't have enough energy");
