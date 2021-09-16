@@ -2,9 +2,28 @@
 
 if(turn){
 	
-	rand = random(array_length(attack_array));
 	
-	attack_physical(self.id, attack_array[rand], target_array);
+	rand_type = irandom(1);
+	
+	switch(rand_type){
+	
+		case 0:
+		rand_attack =  irandom(array_length(phys_attack_array)-1);
+		array_push(obj_battle_controller.cmd_selection, 0);
+		array_push(obj_battle_controller.turn_order, self.id);
+		array_push(obj_battle_controller.attack_object, phys_attack_array[rand_attack]);
+		show_debug_message("Pushed Enemy Information");
+		break;
+		
+		case 1:
+		rand_attack =  irandom(array_length(magic_attack_array)-1);
+		array_push(obj_battle_controller.cmd_selection, 1);
+		array_push(obj_battle_controller.turn_order, self.id);
+		array_push(obj_battle_controller.attack_object, magic_attack_array[rand_attack]);
+		show_debug_message("Pushed Enemy Information");
+		break;
+	
+	}
 	
 	//Need second array to avoid skipping of status charges
 	if(array_length(turn_array) != 0){
@@ -24,8 +43,8 @@ if(turn){
 	}
 	
 	turn = false;
-	
-	obj_battle_commands.section = 0;
+	//May have to move somewhere else later
+	obj_battle_controller.start_fight = true;
 	
 }
 

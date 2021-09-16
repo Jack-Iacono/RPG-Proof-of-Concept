@@ -4,5 +4,7 @@
 // Inherit the parent event
 event_inherited();
 
-attack_array[0] = enemy_attack_slime;
+phys_attack_array[0] = enemy_attack_slime;
+
+magic_attack_array[0] = enemy_attack_slime;
 

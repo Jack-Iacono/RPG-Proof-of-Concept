@@ -24,8 +24,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Enemy Stuff",
-    "path": "folders/Objects/Battle Objects/Enemy Stuff.yy",
+    "name": "Location Anchors",
+    "path": "folders/Objects/Battle Objects/Battle Controllers/Location Anchors.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_location_controller",

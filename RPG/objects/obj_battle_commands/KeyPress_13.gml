@@ -120,18 +120,22 @@ switch(section){
 			if(array_length(target_array) >= selections){
 				
 				if(attack_type == obj_attack_physical){
-				
-					attack_physical(obj_player_battle, attack_object, target_array);
+					
+					array_push(obj_battle_controller.cmd_selection, 0);
+					array_push(obj_battle_controller.turn_order, self.id);
+					array_push(obj_battle_controller.attack_object, attack_object);
+					array_push(obj_battle_controller.player_target_array, target_array);
+					show_debug_message("Pushed Player Information");
 				
 				}else if(attack_type == obj_attack_magical){
-					if(obj_player_battle.elemental_energy >= attack_object.cost){
-						attack_magical(obj_player_battle, attack_object, target_array);
-					}else{
-						array_push(obj_pop_up.status_text, "Player doesn't have enough energy");
-						array_push(obj_pop_up.text_alpha, 1);
-					}
+					
+					array_push(obj_battle_controller.cmd_selection, 1);
+					array_push(obj_battle_controller.turn_order, self.id);
+					array_push(obj_battle_controller.attack_object, attack_object);
+					array_push(obj_battle_controller.player_target_array, target_array);
 					
 				}
+				
 				array_delete(target_array, 0, array_length(target_array));
 				end_turn();
 				section = 7;
@@ -146,8 +150,10 @@ switch(section){
 	case 8:
 		if(cursor_opt < array_length(enemy) - 1){
 			
-			instance_create_layer(x,y,"Instances",obj_text_box);
-			obj_text_box.text = enemy[cursor_opt].desc;
+			array_push(obj_battle_controller.cmd_selection, 2);
+			array_push(obj_battle_controller.turn_order, self.id);
+			array_push(obj_battle_controller.player_target_array, enemy[cursor_opt]);
+			
 			end_turn();
 			section = 7;
 		

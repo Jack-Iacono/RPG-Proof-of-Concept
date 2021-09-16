@@ -22,7 +22,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Location Anchors",
-    "path": "folders/Objects/Battle Objects/Location Anchors.yy",
+    "path": "folders/Objects/Battle Objects/Battle Controllers/Location Anchors.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_playerStand",

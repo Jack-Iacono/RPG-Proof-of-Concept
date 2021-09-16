@@ -20,11 +20,10 @@ function attack_physical(attacker, attack_object, target_array){
 		target_array[i].hp -= attacker.damage * attack_object.damage_multiplier * weakness_mult;
 		elemental_chance(attack_object.element, target_array[i]);
 		
-		if(target_array[i].name = obj_player_battle.name){
-			array_push(obj_pop_up.status_text, ": " + string(attacker.damage * attack_object.damage_multiplier * weakness_mult) + " dmg");
-			array_push(obj_pop_up.defender_text, target_array[i].name);
-			array_push(obj_pop_up.text_alpha, 1);
-		}
+		//prints out attack name on use
+		array_push(obj_pop_up.status_text, ": " + string(attack_object.name));
+		array_push(obj_pop_up.defender_text, attacker.name);
+		array_push(obj_pop_up.text_alpha, 1);
 		
 	}
 	
@@ -44,16 +43,22 @@ function attack_magical(attacker, attack_object, target_array){
 			weakness_mult = 1;
 		}
 		
-		target_array[i].hp -= attacker.damage * attack_object.damage_multiplier * weakness_mult;
-		show_debug_message("battle_commands Line 48: Attack_object cost: " + string(attack_object.cost));
-		show_debug_message("battle_commands Line 49: Attacker Elemental Energy: " + string(attack_object.cost));
-		elemental_chance_magic(attack_object.element, target_array[i]);
-		
-		if(target_array[i].name = obj_player_battle.name){
-			array_push(obj_pop_up.status_text, ": " + string(attacker.damage * attack_object.damage_multiplier * weakness_mult) + " dmg");
-			array_push(obj_pop_up.defender_text, target_array[i].name);
-			array_push(obj_pop_up.text_alpha, 1);
+		if(attack.elemental_energy >= attack_object.cost){
+			target_array[i].hp -= attacker.damage * attack_object.damage_multiplier * weakness_mult;
+			show_debug_message("battle_commands Line 48: Attack_object cost: " + string(attack_object.cost));
+			show_debug_message("battle_commands Line 49: Attacker Elemental Energy: " + string(attack_object.cost));
+			elemental_chance_magic(attack_object.element, target_array[i]);
+		}else{
+			attack_object = attack_failed_spell;
+			target_array[i].hp -= attacker.damage * attack_object.damage_multiplier;
+			show_debug_message("battle_commands Line 48: Attack_object cost: " + string(attack_object.cost));
+			show_debug_message("battle_commands Line 49: Attacker Elemental Energy: " + string(attack_object.cost));	
 		}
+		
+		//prints out attack name on use
+		array_push(obj_pop_up.status_text, ": " + string(attack_object.name));
+		array_push(obj_pop_up.defender_text, attacker.name);
+		array_push(obj_pop_up.text_alpha, 1);
 		
 	}
 	
