@@ -24,9 +24,7 @@ function attack_physical(attacker, attack_object, target_array){
 		elemental_chance(attack_object.element, target_array[i]);
 		
 		//prints out attack name on use
-		array_push(obj_pop_up.status_text, ": " + string(attack_object.name));
-		array_push(obj_pop_up.defender_text, attacker.name);
-		array_push(obj_pop_up.text_alpha, 1);
+		array_push(obj_pop_up.text, attacker.name + ": " + string(attack_object.name));
 		
 	}
 	
@@ -53,15 +51,11 @@ function attack_magical(attacker, attack_object, target_array){
 			elemental_chance_magic(attack_object.element, target_array[i]);
 		}else{
 			attack_object = attack_failed_spell;
-			target_array[i].hp -= attacker.damage * attack_object.damage_multiplier;
-			show_debug_message("battle_commands Line 48: Attack_object cost: " + string(attack_object.cost));
-			show_debug_message("battle_commands Line 49: Attacker Elemental Energy: " + string(attack_object.cost));	
+			target_array[i].hp -= attacker.damage * attack_object.damage_multiplier;	
 		}
 		
 		//prints out attack name on use
-		array_push(obj_pop_up.status_text, ": " + string(attack_object.name));
-		array_push(obj_pop_up.defender_text, attacker.name);
-		array_push(obj_pop_up.text_alpha, 1);
+		array_push(obj_pop_up.text, attacker.name + ": " + string(attack_object.name));
 		
 	}
 	

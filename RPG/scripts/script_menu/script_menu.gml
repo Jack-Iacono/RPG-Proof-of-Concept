@@ -55,10 +55,19 @@ function print_data(x, y, color1, color2, str){
 		
 }
 
-function print_text_box(x, y, color1, color2, str, sep, width){
+/// @function print_text_box(x, y, color1, color2, str, sep, width, font);
+/// @param {real} x - x position of the text
+/// @param {real} y - y position on the text
+/// @param {color} color1 - The color of the inside of the text
+/// @param {color} color2 - The color of the outside of the text
+/// @param {string} str - the string to be written
+/// @param {real} sep - The seperation between lines of the same text
+/// @param {real} width - maximum width accepted by the string per line
+/// @param {font} font - the font to be written in
+function print_text_box(x, y, color1, color2, str, sep, width, font){
 		
 		draw_set_color(color2);
-		draw_set_font(font_stats);
+		draw_set_font(font);
 		draw_text_ext(x + 3, y, str, sep,width);
 		draw_text_ext(x - 2, y, str, sep,width);
 		draw_text_ext(x, y + 3, str, sep,width);

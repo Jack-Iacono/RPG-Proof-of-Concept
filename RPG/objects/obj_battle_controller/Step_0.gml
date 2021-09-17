@@ -32,6 +32,8 @@ if(array_length(turn_order) = instance_number(obj_enemy_battle) + 1 && !sorted){
 //Starts fight when signaled to
 if(start_fight){
 	
+	array_delete(obj_pop_up.text, 0, array_length(obj_pop_up.text));
+	
 	for(j = 0; j < array_length(turn_order); j++){
 		
 		show_debug_message("Current Attacker: " + turn_order[j].name + " | Attack_object: " + attack_object[j].name +  " | CMD: " + string(cmd_selection[j]));

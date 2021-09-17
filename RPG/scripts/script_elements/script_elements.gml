@@ -19,9 +19,7 @@ function elemental_chance(element, target){
 				target.turn_array[refresh_index] = element.duration;
 				
 			}else{
-				array_push(obj_pop_up.status_text, " got " + element.name);
-				array_push(obj_pop_up.defender_text, target.name);
-				array_push(obj_pop_up.text_alpha, 1);
+				array_push(obj_pop_up.text,target.name + " got " + element.name);
 				array_push(target.status_array, element);
 				array_push(target.turn_array, element.duration);
 				
@@ -41,9 +39,7 @@ function elemental_chance(element, target){
 				target.turn_array[refresh_index] = element.duration;
 				
 			}else{
-				array_push(obj_pop_up.status_text, " got " + element.name);
-				array_push(obj_pop_up.defender_text, target.name);
-				array_push(obj_pop_up.text_alpha, 1);
+				array_push(obj_pop_up.text,target.name + " got " + element.name);
 				array_push(target.status_array, element);
 				array_push(target.turn_array, element.duration);
 				
@@ -71,9 +67,7 @@ function elemental_chance_magic(element, target){
 				target.turn_array[refresh_index] = element.duration;
 				
 			}else{
-				array_push(obj_pop_up.status_text, " got " + element.name);
-				array_push(obj_pop_up.defender_text, target.name);
-				array_push(obj_pop_up.text_alpha, 1);
+				array_push(obj_pop_up.text, target.name + " got ****" + element.name);
 				array_push(target.status_array, element);
 				array_push(target.turn_array, element.duration);
 				
@@ -93,9 +87,7 @@ function elemental_chance_magic(element, target){
 				target.turn_array[refresh_index] = element.duration;
 				
 			}else{
-				array_push(obj_pop_up.status_text, " got " + element.name);
-				array_push(obj_pop_up.defender_text, target.name);
-				array_push(obj_pop_up.text_alpha, 1);
+				array_push(obj_pop_up.text, target.name + " got " + element.name);
 				array_push(target.status_array, element);
 				array_push(target.turn_array, element.duration);
 				
