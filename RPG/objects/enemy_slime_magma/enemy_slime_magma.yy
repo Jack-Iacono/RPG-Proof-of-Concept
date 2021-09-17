@@ -32,6 +32,7 @@
     {"propertyId":{"name":"desc","path":"objects/obj_enemy_battle/obj_enemy_battle.yy",},"objectId":{"name":"obj_enemy_battle","path":"objects/obj_enemy_battle/obj_enemy_battle.yy",},"value":"This slime is packing some heat (literally). It gained a weakness to water, but retains it's anti-magic abilities.","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"damage","path":"objects/obj_enemy_battle/obj_enemy_battle.yy",},"objectId":{"name":"obj_enemy_battle","path":"objects/obj_enemy_battle/obj_enemy_battle.yy",},"value":"4","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"element","path":"objects/obj_enemy_battle/obj_enemy_battle.yy",},"objectId":{"name":"obj_enemy_battle","path":"objects/obj_enemy_battle/obj_enemy_battle.yy",},"value":"element_flame","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"spd","path":"objects/obj_enemy_battle/obj_enemy_battle.yy",},"objectId":{"name":"obj_enemy_battle","path":"objects/obj_enemy_battle/obj_enemy_battle.yy",},"value":"3","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "Slimes",

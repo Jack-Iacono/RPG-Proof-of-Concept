@@ -23,9 +23,9 @@
   "eventList": [],
   "properties": [],
   "overriddenProperties": [
-    {"propertyId":{"name":"element","path":"objects/obj_attack/obj_attack.yy",},"objectId":{"name":"obj_attack","path":"objects/obj_attack/obj_attack.yy",},"value":"element_flame","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"damage_multiplier","path":"objects/obj_attack/obj_attack.yy",},"objectId":{"name":"obj_attack","path":"objects/obj_attack/obj_attack.yy",},"value":"1.1","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"name","path":"objects/obj_attack/obj_attack.yy",},"objectId":{"name":"obj_attack","path":"objects/obj_attack/obj_attack.yy",},"value":"Magma Bubble","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"element","path":"objects/obj_attack/obj_attack.yy",},"objectId":{"name":"obj_attack","path":"objects/obj_attack/obj_attack.yy",},"value":"element_none","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"damage_multiplier","path":"objects/obj_attack/obj_attack.yy",},"objectId":{"name":"obj_attack","path":"objects/obj_attack/obj_attack.yy",},"value":"0.65","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"name","path":"objects/obj_attack/obj_attack.yy",},"objectId":{"name":"obj_attack","path":"objects/obj_attack/obj_attack.yy",},"value":"Envelope","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"cost","path":"objects/obj_enemy_attack_magic/obj_enemy_attack_magic.yy",},"objectId":{"name":"obj_enemy_attack_magic","path":"objects/obj_enemy_attack_magic/obj_enemy_attack_magic.yy",},"value":"5","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
@@ -33,7 +33,7 @@
     "path": "folders/Objects/Battle Objects/Attacks/EnemyAttacks/Slime Attacks/Magic.yy",
   },
   "resourceVersion": "1.0",
-  "name": "enemy_attack_slime_magma",
+  "name": "enemy_attack_slime_absorb",
   "tags": [],
   "resourceType": "GMObject",
 }

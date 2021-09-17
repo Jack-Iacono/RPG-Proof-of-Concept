@@ -15,3 +15,7 @@ array_delete(cmd_selection, 0, 1);
 
 turn_order[0] = obj_player_battle;
 array_delete(turn_order, 0, 1);
+
+enemy_target_array[0] = obj_player_battle;
+
+sorted = false;

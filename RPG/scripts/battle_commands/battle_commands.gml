@@ -6,10 +6,13 @@
 ///@function attack_physical(attacker, attack_object, defender, ...);
 /// @param {obj} attacker - the attacking instance object
 /// @param {obj} attack_object - The object representing the attack which will be used
-/// @param {obj} target_array- The list of defending parties (1 - 3)
+/// @param {list} target_array- The list of defending parties (1 - 3)
 function attack_physical(attacker, attack_object, target_array){
 	
 	for(i = 0; i < array_length(target_array); i++){
+		
+		show_debug_message("Attacker: " + attacker.name + " | attack_object: " + attack_object.name + " | Target: " + target_array[i].name);
+		
 		//Calculates Elemental Weakness
 		if(target_array[i].weakness == attack_object.element){
 			weakness_mult = 1.5;
@@ -35,6 +38,8 @@ function attack_physical(attacker, attack_object, target_array){
 /// @param {obj} target_array- The list of defending parties (1 - 3)
 function attack_magical(attacker, attack_object, target_array){
 	
+	//show_debug_message("Attacker: " + attacker.name + " | attack_object: " + attack_object.name + " | Target: " + target_array[0].name);
+	
 	for(i = 0; i < array_length(target_array); i++){
 		//Calculates Elemental Weakness
 		if(target_array[i].weakness == attack_object.element){
@@ -43,10 +48,8 @@ function attack_magical(attacker, attack_object, target_array){
 			weakness_mult = 1;
 		}
 		
-		if(attack.elemental_energy >= attack_object.cost){
+		if(attacker.elemental_energy >= attack_object.cost){
 			target_array[i].hp -= attacker.damage * attack_object.damage_multiplier * weakness_mult;
-			show_debug_message("battle_commands Line 48: Attack_object cost: " + string(attack_object.cost));
-			show_debug_message("battle_commands Line 49: Attacker Elemental Energy: " + string(attack_object.cost));
 			elemental_chance_magic(attack_object.element, target_array[i]);
 		}else{
 			attack_object = attack_failed_spell;

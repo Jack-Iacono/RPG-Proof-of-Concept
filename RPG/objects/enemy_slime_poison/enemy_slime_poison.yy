@@ -33,6 +33,7 @@
     {"propertyId":{"name":"damage","path":"objects/obj_enemy_battle/obj_enemy_battle.yy",},"objectId":{"name":"obj_enemy_battle","path":"objects/obj_enemy_battle/obj_enemy_battle.yy",},"value":"3","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"weakness","path":"objects/obj_enemy_battle/obj_enemy_battle.yy",},"objectId":{"name":"obj_enemy_battle","path":"objects/obj_enemy_battle/obj_enemy_battle.yy",},"value":"element_flame","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"element","path":"objects/obj_enemy_battle/obj_enemy_battle.yy",},"objectId":{"name":"obj_enemy_battle","path":"objects/obj_enemy_battle/obj_enemy_battle.yy",},"value":"element_poison","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"spd","path":"objects/obj_enemy_battle/obj_enemy_battle.yy",},"objectId":{"name":"obj_enemy_battle","path":"objects/obj_enemy_battle/obj_enemy_battle.yy",},"value":"2","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "Slimes",

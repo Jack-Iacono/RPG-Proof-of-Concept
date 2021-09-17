@@ -122,17 +122,26 @@ switch(section){
 				if(attack_type == obj_attack_physical){
 					
 					array_push(obj_battle_controller.cmd_selection, 0);
-					array_push(obj_battle_controller.turn_order, self.id);
+					array_push(obj_battle_controller.turn_order, obj_player_battle);
 					array_push(obj_battle_controller.attack_object, attack_object);
-					array_push(obj_battle_controller.player_target_array, target_array);
+					
+					for(i = 0; i < array_length(target_array); i++){
+						obj_battle_controller.player_target_array[i] = target_array[i];
+					}
+					
 					show_debug_message("Pushed Player Information");
 				
 				}else if(attack_type == obj_attack_magical){
 					
 					array_push(obj_battle_controller.cmd_selection, 1);
-					array_push(obj_battle_controller.turn_order, self.id);
+					array_push(obj_battle_controller.turn_order, obj_player_battle);
 					array_push(obj_battle_controller.attack_object, attack_object);
-					array_push(obj_battle_controller.player_target_array, target_array);
+					
+					for(i = 0; i < array_length(target_array); i++){
+						obj_battle_controller.player_target_array[i] = target_array[i];
+					}
+					
+					show_debug_message("Pushed Player Information");
 					
 				}
 				
@@ -151,7 +160,7 @@ switch(section){
 		if(cursor_opt < array_length(enemy) - 1){
 			
 			array_push(obj_battle_controller.cmd_selection, 2);
-			array_push(obj_battle_controller.turn_order, self.id);
+			array_push(obj_battle_controller.turn_order, obj_player_battle);
 			array_push(obj_battle_controller.player_target_array, enemy[cursor_opt]);
 			
 			end_turn();

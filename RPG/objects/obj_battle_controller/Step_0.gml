@@ -2,14 +2,13 @@
 
 
 //Sorts turn_order by speed stat
-if(array_length(turn_order) = instance_number(obj_enemy_battle)){
+if(array_length(turn_order) = instance_number(obj_enemy_battle) + 1 && !sorted){
 	
-	//Inserts player into array
-	array_push(turn_order, obj_player_battle);
+	show_debug_message("Turn, Attack, CMD: " + string(array_length(turn_order)) + ", " + string(array_length(attack_object)) + ", " + string(array_length(cmd_selection)));
 	
 	for(i = 0; i < array_length(turn_order); i++){
 		for(j = 0; j < array_length(turn_order); j++){
-			if(turn_order[i].spd < turn_order[j].spd){
+			if(turn_order[i].spd > turn_order[j].spd){
 				//Moves object
 				temp = turn_order[i];
 				turn_order[i] = turn_order[j];
@@ -27,23 +26,26 @@ if(array_length(turn_order) = instance_number(obj_enemy_battle)){
 			}
 		}
 	}
+	sorted = true;
 }
 
 //Starts fight when signaled to
 if(start_fight){
 	
-	for(i = 0; i < array_length(turn_order); i++){
+	for(j = 0; j < array_length(turn_order); j++){
 		
-		if(turn_order[i] = obj_player_battle && turn_order[i].hp > 0){
+		show_debug_message("Current Attacker: " + turn_order[j].name + " | Attack_object: " + attack_object[j].name +  " | CMD: " + string(cmd_selection[j]));
 		
-			switch(cmd_selection){
+		if(turn_order[j] = obj_player_battle && turn_order[j].hp > 0){
+		
+			switch(cmd_selection[j]){
 			
 				case 0:
-					attack_physical(turn_order[i], attack_object[i], player_target_array);
+					attack_physical(turn_order[j], attack_object[j], player_target_array);
 					break;
 			
 				case 1:
-					attack_magical(turn_order[i], attack_object[i], player_target_array);
+					attack_magical(turn_order[j], attack_object[j], player_target_array);
 					break;
 			
 				case 2:
@@ -52,26 +54,23 @@ if(start_fight){
 					break;
 			}
 		
-		}else if(turn_order[0] = obj_enemy_battle && turn_order[i].hp > 0){
+		}else if(turn_order[j] != obj_enemy_battle && turn_order[j].hp > 0){
 		
-			switch(cmd_selection){
+			switch(cmd_selection[j]){
 			
 				case 0:
-					attack_physical(turn_order[i], attack_object[i], player_target_array);
+					show_debug_message("Turn_Order: " + turn_order[j].name + " | attack_object: " + attack_object[j].name + " | Target: " + enemy_target_array[0].name);
+					attack_physical(turn_order[j], attack_object[j], enemy_target_array);
 					break;
 			
 				case 1:
-					attack_magical(turn_order[i], attack_object[i], player_target_array);
-					break;
-			
-				case 2:
-					instance_create_layer(x,y,"Instances",obj_text_box);
-					obj_text_box.text = player_target_array.desc;
+					show_debug_message("Turn_Order: " + turn_order[j].name + " | attack_object: " + attack_object[j].name + " | Target: " + enemy_target_array[0].name);
+					attack_magical(turn_order[j], attack_object[j], enemy_target_array);
 					break;
 			}
 		
 		}
-		show_debug_message("Ran Through For Loop");
+		show_debug_message("Ran Through For Loop " + string(j) + " times");
 	}
 	
 	start_fight = false;
@@ -82,6 +81,7 @@ if(start_fight){
 	array_delete(player_target_array,0,array_length(player_target_array));
 	array_delete(attack_object,0,array_length(attack_object));
 	
+	sorted = false;
 }
 
 /*cmd_selection list

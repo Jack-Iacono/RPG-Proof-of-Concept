@@ -29,8 +29,8 @@
     {"propertyId":{"name":"targets","path":"objects/obj_attack/obj_attack.yy",},"objectId":{"name":"obj_attack","path":"objects/obj_attack/obj_attack.yy",},"value":"1","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
-    "name": "Slime Attacks",
-    "path": "folders/Objects/Battle Objects/Attacks/EnemyAttacks/Slime Attacks.yy",
+    "name": "Physical",
+    "path": "folders/Objects/Battle Objects/Attacks/EnemyAttacks/Slime Attacks/Physical.yy",
   },
   "resourceVersion": "1.0",
   "name": "enemy_attack_slime",
