@@ -52,7 +52,7 @@ if(start_fight){
 			
 				case 2:
 					instance_create_layer(x,y,"Instances",obj_text_box);
-					obj_text_box.text = player_target_array.desc;
+					obj_text_box.text = player_target_array[0].desc;
 					break;
 			}
 		

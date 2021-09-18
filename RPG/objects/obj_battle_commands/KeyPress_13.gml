@@ -161,6 +161,7 @@ switch(section){
 			
 			array_push(obj_battle_controller.cmd_selection, 2);
 			array_push(obj_battle_controller.turn_order, obj_player_battle);
+			array_push(obj_battle_controller.attack_object, obj_attack_physical);
 			array_push(obj_battle_controller.player_target_array, enemy[cursor_opt]);
 			
 			end_turn();

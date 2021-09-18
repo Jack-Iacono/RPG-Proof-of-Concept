@@ -21,8 +21,8 @@
     "path": "texturegroups/Default",
   },
   "swatchColours": null,
-  "gridX": 0,
-  "gridY": 0,
+  "gridX": 16,
+  "gridY": 220,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"52438d26-62a7-4592-a467-2921d5418cc9","path":"sprites/spr_pop_up/spr_pop_up.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"52438d26-62a7-4592-a467-2921d5418cc9","path":"sprites/spr_pop_up/spr_pop_up.yy",},"LayerId":{"name":"f274f5e6-2413-43f3-8f98-0132cfa30a78","path":"sprites/spr_pop_up/spr_pop_up.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
@@ -67,7 +67,31 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"f274f5e6-2413-43f3-8f98-0132cfa30a78","tags":[],"resourceType":"GMImageLayer",},
   ],
-  "nineSlice": null,
+  "nineSlice": {
+    "left": 48,
+    "top": 78,
+    "right": 54,
+    "bottom": 54,
+    "guideColour": [
+      4294902015,
+      4294902015,
+      4294902015,
+      4294902015,
+    ],
+    "highlightColour": 1728023040,
+    "highlightStyle": 0,
+    "enabled": false,
+    "tileMode": [
+      0,
+      0,
+      0,
+      0,
+      0,
+    ],
+    "resourceVersion": "1.0",
+    "loadedVersion": null,
+    "resourceType": "GMNineSliceData",
+  },
   "parent": {
     "name": "Battle Visuals",
     "path": "folders/Sprites/Battle Visuals.yy",

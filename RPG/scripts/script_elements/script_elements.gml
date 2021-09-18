@@ -103,17 +103,23 @@ function elemental_chance_magic(element, target){
 /// @param {obj_target} target - The target which is to be inflicted with the status
 function elemental_effect(element, target){
 	
+	//initializes text variables
+	text_target = target.name
+	text_effect = "";
+	
 	switch(element){
 		
 		case element_none:
 			//does the element's damage as a percent of total health
 			target.hp -= (target.hp / 100) * element.element_damage;
-			show_debug_message(target.name + " took " + string((target.hp / 100) * element.element_damage) + " Bleed Damage");
+			//show_debug_message(target.name + " took " + string((target.hp / 100) * element.element_damage) + " Bleed Damage");
+			text_effect = string((target.hp / 100) * element.element_damage) + " " + element.name;
 			break;
 		
 		case element_flame:
 			target.hp -= element.element_damage;
-			show_debug_message(target.name + " took " + string(element.element_damage) + " Flame Damage");
+			//show_debug_message(target.name + " took " + string(element.element_damage) + " Flame Damage");
+			text_effect = string(element.element_damage) + " " + element.name;
 			break;
 		
 		case element_poison:
@@ -126,9 +132,12 @@ function elemental_effect(element, target){
 			
 			//multiplies damage over time
 			target.hp -= element.element_damage * (element.duration - target.turn_array[status_index]);
-			show_debug_message(target.name + " took " + string(element.element_damage * (element.duration - target.turn_array[status_index])) + " Poison Damage");
+			//show_debug_message(target.name + " took " + string(element.element_damage * (element.duration - target.turn_array[status_index])) + " Poison Damage");
+			text_effect = string(element.element_damage * (element.duration - target.turn_array[status_index])) + " " + element.name;
 			break;
 		
 	}
+
+	array_push(obj_pop_up.text, text_target + ": " + text_effect);
 
 }
