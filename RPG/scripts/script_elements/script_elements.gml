@@ -9,9 +9,9 @@ function elemental_chance(element, target){
 		//Gives player a lower chance of getting a status when multiple enemies are present
 		if(random(100) < element.chance / (instance_number(obj_enemy_battle) * 1.66)){
 			
-			for(j = 0; j < array_length(target.status_array); j++){
-				if(target.status_array[j].name = element.name){
-					refresh_index = j;
+			for(counter = 0; counter < array_length(target.status_array); counter++){
+				if(target.status_array[counter].name = element.name){
+					refresh_index = counter;
 				}
 			}
 			
@@ -29,9 +29,9 @@ function elemental_chance(element, target){
 	}else{
 			if(random(100) < element.chance){
 			
-			for(j = 0; j < array_length(target.status_array); j++){
-				if(target.status_array[j].name = element.name){
-					refresh_index = j;
+			for(counter = 0; counter < array_length(target.status_array); counter++){
+				if(target.status_array[counter].name = element.name){
+					refresh_index = counter;
 				}
 			}
 			
@@ -57,9 +57,9 @@ function elemental_chance_magic(element, target){
 		//Gives player a lower chance of getting a status when multiple enemies are present
 		if(random(100) < element.chance / (instance_number(obj_enemy_battle) * 0.88)){
 			
-			for(j = 0; j < array_length(target.status_array); j++){
-				if(target.status_array[j].name = element.name){
-					refresh_index = j;
+			for(counter = 0; counter < array_length(target.status_array); counter++){
+				if(target.status_array[counter].name = element.name){
+					refresh_index = counter;
 				}
 			}
 			
@@ -67,7 +67,7 @@ function elemental_chance_magic(element, target){
 				target.turn_array[refresh_index] = element.duration;
 				
 			}else{
-				array_push(obj_pop_up.text, target.name + " got ****" + element.name);
+				array_push(obj_pop_up.text, target.name + " got " + element.name);
 				array_push(target.status_array, element);
 				array_push(target.turn_array, element.duration);
 				
@@ -77,9 +77,9 @@ function elemental_chance_magic(element, target){
 	}else{
 			if(random(100) < element.chance * 2){
 			
-			for(j = 0; j < array_length(target.status_array); j++){
-				if(target.status_array[j].name = element.name){
-					refresh_index = j;
+			for(counter = 0; counter < array_length(target.status_array); counter++){
+				if(target.status_array[counter].name = element.name){
+					refresh_index = counter;
 				}
 			}
 			
@@ -118,9 +118,9 @@ function elemental_effect(element, target){
 		
 		case element_poison:
 			//Could use this for other elements
-			for(j = 0; j < array_length(target.status_array); j++){
-				if(element == target.status_array[j]){
-					status_index = j;
+			for(counter = 0; counter < array_length(target.status_array); counter++){
+				if(element == target.status_array[counter]){
+					status_index = counter;
 				}
 			}
 			
