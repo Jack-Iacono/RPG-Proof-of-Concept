@@ -11,7 +11,7 @@ function attack_physical(attacker, attack_object, target_array){
 	
 	for(i = 0; i < array_length(target_array); i++){
 		
-		show_debug_message("Attacker: " + attacker.name + " | attack_object: " + attack_object.name + " | Target: " + target_array[i].name);
+		//show_debug_message("Attacker: " + attacker.name + " | attack_object: " + attack_object.name + " | Target: " + target_array[i].name);
 		
 		//Calculates Elemental Weakness
 		if(target_array[i].weakness == attack_object.element){

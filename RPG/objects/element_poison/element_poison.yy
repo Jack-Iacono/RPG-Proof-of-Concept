@@ -24,9 +24,11 @@
   "properties": [],
   "overriddenProperties": [
     {"propertyId":{"name":"element_damage","path":"objects/obj_element/obj_element.yy",},"objectId":{"name":"obj_element","path":"objects/obj_element/obj_element.yy",},"value":"3","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"name","path":"objects/obj_element/obj_element.yy",},"objectId":{"name":"obj_element","path":"objects/obj_element/obj_element.yy",},"value":"Decay","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"name","path":"objects/obj_element/obj_element.yy",},"objectId":{"name":"obj_element","path":"objects/obj_element/obj_element.yy",},"value":"Poison","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"chance","path":"objects/obj_element/obj_element.yy",},"objectId":{"name":"obj_element","path":"objects/obj_element/obj_element.yy",},"value":"40","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"duration","path":"objects/obj_element/obj_element.yy",},"objectId":{"name":"obj_element","path":"objects/obj_element/obj_element.yy",},"value":"5","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"color","path":"objects/obj_element/obj_element.yy",},"objectId":{"name":"obj_element","path":"objects/obj_element/obj_element.yy",},"value":"$FF007F00","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"abbreviation","path":"objects/obj_element/obj_element.yy",},"objectId":{"name":"obj_element","path":"objects/obj_element/obj_element.yy",},"value":"Psn","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "Element Stuff",

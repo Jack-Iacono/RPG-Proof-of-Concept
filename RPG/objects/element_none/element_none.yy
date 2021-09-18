@@ -25,8 +25,10 @@
   "overriddenProperties": [
     {"propertyId":{"name":"element_damage","path":"objects/obj_element/obj_element.yy",},"objectId":{"name":"obj_element","path":"objects/obj_element/obj_element.yy",},"value":"8","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"duration","path":"objects/obj_element/obj_element.yy",},"objectId":{"name":"obj_element","path":"objects/obj_element/obj_element.yy",},"value":"2","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"name","path":"objects/obj_element/obj_element.yy",},"objectId":{"name":"obj_element","path":"objects/obj_element/obj_element.yy",},"value":"bleed","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"name","path":"objects/obj_element/obj_element.yy",},"objectId":{"name":"obj_element","path":"objects/obj_element/obj_element.yy",},"value":"Bleed","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"chance","path":"objects/obj_element/obj_element.yy",},"objectId":{"name":"obj_element","path":"objects/obj_element/obj_element.yy",},"value":"15","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"color","path":"objects/obj_element/obj_element.yy",},"objectId":{"name":"obj_element","path":"objects/obj_element/obj_element.yy",},"value":"$FA000066","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"abbreviation","path":"objects/obj_element/obj_element.yy",},"objectId":{"name":"obj_element","path":"objects/obj_element/obj_element.yy",},"value":"Bld","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "Element Stuff",

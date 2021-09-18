@@ -23,10 +23,12 @@
   "eventList": [],
   "properties": [],
   "overriddenProperties": [
-    {"propertyId":{"name":"name","path":"objects/obj_element/obj_element.yy",},"objectId":{"name":"obj_element","path":"objects/obj_element/obj_element.yy",},"value":"Flame","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"name","path":"objects/obj_element/obj_element.yy",},"objectId":{"name":"obj_element","path":"objects/obj_element/obj_element.yy",},"value":"Burn","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"duration","path":"objects/obj_element/obj_element.yy",},"objectId":{"name":"obj_element","path":"objects/obj_element/obj_element.yy",},"value":"3","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"element_damage","path":"objects/obj_element/obj_element.yy",},"objectId":{"name":"obj_element","path":"objects/obj_element/obj_element.yy",},"value":"10","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"chance","path":"objects/obj_element/obj_element.yy",},"objectId":{"name":"obj_element","path":"objects/obj_element/obj_element.yy",},"value":"33","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"color","path":"objects/obj_element/obj_element.yy",},"objectId":{"name":"obj_element","path":"objects/obj_element/obj_element.yy",},"value":"$FF3299FF","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"abbreviation","path":"objects/obj_element/obj_element.yy",},"objectId":{"name":"obj_element","path":"objects/obj_element/obj_element.yy",},"value":"Brn","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "Element Stuff",

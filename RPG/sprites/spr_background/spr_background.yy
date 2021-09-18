@@ -22,7 +22,7 @@
   },
   "swatchColours": null,
   "gridX": 240,
-  "gridY": 60,
+  "gridY": 270,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"97c88647-e1fb-4e17-aaa0-6dc749c22e0c","path":"sprites/spr_background/spr_background.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"97c88647-e1fb-4e17-aaa0-6dc749c22e0c","path":"sprites/spr_background/spr_background.yy",},"LayerId":{"name":"96a8db42-2c92-4156-9c3c-444347e2e95a","path":"sprites/spr_background/spr_background.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
