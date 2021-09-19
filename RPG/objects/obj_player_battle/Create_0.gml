@@ -10,6 +10,3 @@ array_delete(status_array, 0, 1);
 //Initialize Turn Array
 turn_array[0] = element_flame.duration;
 array_delete(turn_array, 0, 1);
-
-//Disable for set seed
-randomize();

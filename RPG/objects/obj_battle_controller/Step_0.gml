@@ -56,7 +56,7 @@ if(start_fight){
 					break;
 			}
 		
-		}else if(turn_order[j] != obj_enemy_battle && turn_order[j].hp > 0){
+		}else if(turn_order[j] != obj_enemy_battle && turn_order[j].hp > 0 && instance_exists(turn_order[j])){
 		
 			switch(cmd_selection[j]){
 			
@@ -85,6 +85,50 @@ if(start_fight){
 	
 	sorted = false;
 }
+
+//Applies status effects for enemies
+for(i = 0; i < instance_number(obj_enemy_battle); i++){
+	
+	with(instance_find(obj_enemy_battle, i)){
+		//Need second array to avoid skipping of status charges
+		if(array_length(turn_array) != 0){
+			for(i = array_length(status_array) - 1; i >= 0; i--){
+				if(turn_array[i] == 0){
+					array_delete(status_array,i,1);	
+					array_delete(turn_array,i,1);
+				}
+			}
+		}
+	
+		//Applies status over turns
+		for(i = 0; i < array_length(status_array); i++){
+			show_debug_message("Engage elemental effect");
+			elemental_effect(status_array[i], self.id);
+			turn_array[i] -= 1;
+		}
+	}
+	
+	//Applies player status
+	with(obj_player_battle){
+		//Need second array to avoid skipping of status charges
+		if(array_length(turn_array) != 0){
+			for(i = array_length(status_array) - 1; i >= 0; i--){
+				if(turn_array[i] == 0){
+					array_delete(status_array,i,1);	
+					array_delete(turn_array,i,1);
+				}
+			}
+		}
+	
+		//Applies status over turns
+		for(i = 0; i < array_length(status_array); i++){
+			elemental_effect(status_array[i], self.id);
+			turn_array[i] -= 1;
+		}
+	}
+}
+
+	
 
 /*cmd_selection list
 0: Physical Attack
