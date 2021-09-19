@@ -76,6 +76,7 @@ if(start_fight){
 	}
 	
 	start_fight = false;
+	start_effects = true;
 	obj_battle_commands.section = 0;
 	
 	array_delete(cmd_selection,0,array_length(cmd_selection));
@@ -86,25 +87,30 @@ if(start_fight){
 	sorted = false;
 }
 
-//Applies status effects for enemies
-for(i = 0; i < instance_number(obj_enemy_battle); i++){
+if(start_effects){
+	//Applies status effects for enemies
+	for(i = 0; i < instance_number(obj_enemy_battle); i++){
 	
-	with(instance_find(obj_enemy_battle, i)){
-		//Need second array to avoid skipping of status charges
-		if(array_length(turn_array) != 0){
-			for(i = array_length(status_array) - 1; i >= 0; i--){
-				if(turn_array[i] == 0){
-					array_delete(status_array,i,1);	
-					array_delete(turn_array,i,1);
+		with(instance_find(obj_enemy_battle, i)){
+			//Need second array to avoid skipping of status charges
+			if(array_length(turn_array) != 0){
+				for(i = array_length(status_array) - 1; i >= 0; i--){
+					if(turn_array[i] == 0){
+						array_delete(status_array,i,1);	
+						array_delete(turn_array,i,1);
+					}
 				}
 			}
-		}
 	
-		//Applies status over turns
-		for(i = 0; i < array_length(status_array); i++){
-			show_debug_message("Engage elemental effect");
-			elemental_effect(status_array[i], self.id);
-			turn_array[i] -= 1;
+			//Applies status over turns
+			for(i = 0; i < array_length(status_array); i++){
+				show_debug_message("Engage elemental effect");
+				elemental_effect(status_array[i], self.id);
+				turn_array[i] -= 1;
+			}
+			
+			show_debug_message(name + " Status Array: " + string(array_length(status_array)) + "------------------------");
+			show_debug_message(name + " Turn Array: " + string(array_length(turn_array)) + "------------------------");
 		}
 	}
 	
@@ -119,16 +125,18 @@ for(i = 0; i < instance_number(obj_enemy_battle); i++){
 				}
 			}
 		}
-	
+
 		//Applies status over turns
 		for(i = 0; i < array_length(status_array); i++){
 			elemental_effect(status_array[i], self.id);
 			turn_array[i] -= 1;
 		}
 	}
-}
-
 	
+	
+	start_effects = false;
+	obj_battle_commands.section = 0;
+}	
 
 /*cmd_selection list
 0: Physical Attack
@@ -137,3 +145,5 @@ for(i = 0; i < instance_number(obj_enemy_battle); i++){
 3:Enhance
 4:Item
 */
+
+
