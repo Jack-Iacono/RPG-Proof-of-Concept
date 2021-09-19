@@ -1,2 +1,3 @@
-# RPG Proof of Concept
- Just a proof of concept which helps me develop my menu making abilities and skills needed to make a tunr based type game.
+# RPG Proof of Concept Development Notes
+
+Version 0.1 has been uploaded, see executable for more information about features and next additions
