@@ -15,7 +15,7 @@ for(i = 0; i < instance_number(obj_enemy_battle); i++){
 	print_text_box(enemy_stats_x, enemy_stats_y + 60 + (i * 270), c_white, c_black, "Hp: " + string(round(instance_find(obj_enemy_battle, i).hp)) + " | EE: " + string(round(instance_find(obj_enemy_battle, i).elemental_energy)), seperation, width, font_stats); 
 	
 	for(j = 0; j < array_length(instance_find(obj_enemy_battle, i).status_array); j++){
-		print_text_box(enemy_stats_x + (j * 70), enemy_stats_y + 120 + (i * 270), instance_find(obj_enemy_battle, j).status_array[j].color, c_black, instance_find(obj_enemy_battle, j).status_array[j].abbreviation, seperation, width, font_stats);
+		print_text_box(enemy_stats_x + (j * 70), enemy_stats_y + 120 + (i * 270), instance_find(obj_enemy_battle, i).status_array[j].color, c_black, instance_find(obj_enemy_battle, i).status_array[j].abbreviation, seperation, width, font_stats);
 	}
 	
 }
