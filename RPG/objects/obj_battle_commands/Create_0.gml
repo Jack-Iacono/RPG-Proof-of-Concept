@@ -40,4 +40,7 @@ target_array[0] = obj_enemy_battle;
 
 
 cursor_y[0] = 700;
+
+text_array[0] = "";
+array_delete(text_array,0,1);
 		

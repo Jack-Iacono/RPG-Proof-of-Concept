@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_menu_backdrop",
+    "path": "sprites/spr_menu_backdrop/spr_menu_backdrop.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
@@ -39,6 +42,7 @@
     {"varType":5,"value":"0","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"attack_object","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":1,"value":"1","rangeEnabled":true,"rangeMin":1.0,"rangeMax":3.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"selections","tags":[],"resourceType":"GMObjectProperty",},
     {"varType":6,"value":"-0.1","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"target_array","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":6,"value":"0","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"text_array","tags":[],"resourceType":"GMObjectProperty",},
   ],
   "overriddenProperties": [],
   "parent": {

@@ -21,7 +21,7 @@ enemy_target_array[0] = obj_player_battle;
 sorted = false;
 
 //Disable for set seed, Enable for random seed
-//randomize();
+randomize();
 
-random_set_seed(2630065366);
+//random_set_seed(2630065366);
 show_debug_message("Seed: " + string(random_get_seed()));

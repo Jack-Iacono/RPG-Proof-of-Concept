@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_stat_display",
+    "path": "sprites/spr_stat_display/spr_stat_display.yy",
+  },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,

@@ -65,10 +65,10 @@ function attack_magical(attacker, attack_object, target_array){
 
 ///@function end_turn();
 function end_turn(){
-	if(!instance_exists(obj_text_box)){
-		for(i = 0; i < instance_number(obj_enemy_battle); i++){
-			instance_find(obj_enemy_battle,i).turn = true;
-		}
+	
+	for(i = 0; i < instance_number(obj_enemy_battle); i++){
+		instance_find(obj_enemy_battle,i).turn = true;
 	}	
+	
 	obj_player_battle.turn = true;
 }

@@ -15,3 +15,5 @@ for(i = 0; i < instance_number(obj_enemy_battle) + 1; i++){
 	}
 	
 }
+
+image_yscale = (array_length(text_array) * 80) / 14;

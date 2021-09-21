@@ -39,7 +39,6 @@ if(turn){
 	}
 	
 	turn = false;
-	//May have to move somewhere else later
 	obj_battle_controller.start_fight = true;
 	
 }

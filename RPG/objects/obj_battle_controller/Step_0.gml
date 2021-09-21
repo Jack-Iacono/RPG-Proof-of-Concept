@@ -1,5 +1,11 @@
 /// @description Commences Fight
 
+if(instance_number(obj_enemy_battle) = 0){
+	//Transition out of battle, put here
+	game_end();
+}
+
+show_debug_message(string(start_fight));
 
 //Sorts turn_order by speed stat
 if(array_length(turn_order) = instance_number(obj_enemy_battle) + 1 && !sorted){
@@ -36,7 +42,7 @@ if(start_fight){
 	
 	for(j = 0; j < array_length(turn_order); j++){
 		
-		show_debug_message("Current Attacker: " + turn_order[j].name + " | Attack_object: " + attack_object[j].name +  " | CMD: " + string(cmd_selection[j]));
+		//show_debug_message("Current Attacker: " + turn_order[j].name + " | Attack_object: " + attack_object[j].name +  " | CMD: " + string(cmd_selection[j]));
 		
 		if(turn_order[j] = obj_player_battle && turn_order[j].hp > 0){
 		
@@ -51,7 +57,6 @@ if(start_fight){
 					break;
 			
 				case 2:
-					instance_create_layer(x,y,"Instances",obj_text_box);
 					obj_text_box.text = player_target_array[0].desc;
 					break;
 			}
@@ -61,18 +66,18 @@ if(start_fight){
 			switch(cmd_selection[j]){
 			
 				case 0:
-					show_debug_message("Turn_Order: " + turn_order[j].name + " | attack_object: " + attack_object[j].name + " | Target: " + enemy_target_array[0].name);
+					//show_debug_message("Turn_Order: " + turn_order[j].name + " | attack_object: " + attack_object[j].name + " | Target: " + enemy_target_array[0].name);
 					attack_physical(turn_order[j], attack_object[j], enemy_target_array);
 					break;
 			
 				case 1:
-					show_debug_message("Turn_Order: " + turn_order[j].name + " | attack_object: " + attack_object[j].name + " | Target: " + enemy_target_array[0].name);
+					//show_debug_message("Turn_Order: " + turn_order[j].name + " | attack_object: " + attack_object[j].name + " | Target: " + enemy_target_array[0].name);
 					attack_magical(turn_order[j], attack_object[j], enemy_target_array);
 					break;
 			}
 		
 		}
-		show_debug_message("Ran Through For Loop " + string(j) + " times");
+		//show_debug_message("Ran Through For Loop " + string(j) + " times");
 	}
 	
 	start_fight = false;
@@ -104,13 +109,13 @@ if(start_effects){
 	
 			//Applies status over turns
 			for(i = 0; i < array_length(status_array); i++){
-				show_debug_message("Engage elemental effect");
+				//show_debug_message("Engage elemental effect");
 				elemental_effect(status_array[i], self.id);
 				turn_array[i] -= 1;
 			}
 			
-			show_debug_message(name + " Status Array: " + string(array_length(status_array)) + "------------------------");
-			show_debug_message(name + " Turn Array: " + string(array_length(turn_array)) + "------------------------");
+			//show_debug_message(name + " Status Array: " + string(array_length(status_array)) + "------------------------");
+			//show_debug_message(name + " Turn Array: " + string(array_length(turn_array)) + "------------------------");
 		}
 	}
 	
@@ -137,6 +142,8 @@ if(start_effects){
 	start_effects = false;
 	obj_battle_commands.section = 0;
 }	
+
+
 
 /*cmd_selection list
 0: Physical Attack
