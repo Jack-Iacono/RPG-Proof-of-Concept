@@ -9,7 +9,7 @@ switch(section){
 				section = 1;
 				break;
 			case 1:
-				section = 4;
+				section = 8;
 				break;
 			case 2:
 				section = 5;
@@ -72,26 +72,6 @@ switch(section){
 			section = 1;
 		}
 		break;
-	
-	case 4:
-		//options for strategy
-		switch(cursor_opt){
-		
-			case 0:
-				//Enhance Attack Options
-				
-				section = 8;
-				break;
-			case 1:
-				//Inspect Options
-				
-				section = 8;
-				break;
-			case 2:
-				section = 0;
-				break;
-		
-		}
 	
 	case 5:
 	//Item list !! To be implemented !!

@@ -23,17 +23,27 @@ function menu_up(list){
 	}
 }
 
-/// @function print_text_fading(x, y, color1, color2, str, sep, width, alpha)
-function print_text_fading(x, y, color1, color2, str, sep, width, alpha){
-		
-		draw_set_font(font_stats);
-		draw_text_ext_color(x + 3, y, str, sep,width,color2,color2,color2,color2,alpha);
-		draw_text_ext_color(x - 2, y, str, sep,width,color2,color2,color2,color2,alpha);
-		draw_text_ext_color(x, y + 3, str, sep,width,color2,color2,color2,color2,alpha);
-		draw_text_ext_color(x, y - 2 , str, sep,width,color2,color2,color2,color2,alpha);
-		draw_text_ext_color(x, y, str, sep,width,color1,color1,color1,color1,alpha);
-		
+/// @function max_string_width(list);
+/// @param {list} list - The array from which to give max string length
+function max_string_width(list){
+	max = 1;
+	
+	for(i = 0; i < array_length(list); i++){
+		if(string_width(list[i]) > max){
+			max = string_width(list[i]);
+		}
+	}
+	
+	return max;
 }
+
+
+/// @function total_list_height(list);
+/// @param {list} list - The array from which to give max string length
+/// @param {real} speration - The amount of space in between each row of text
+function total_list_height(list, seperation){
+	return array_length(list) * (seperation + 40);
+}	
 
 
 /// @function print_data(x, y, color1, color2, str);

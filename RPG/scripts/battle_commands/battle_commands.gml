@@ -9,6 +9,9 @@
 /// @param {list} target_array- The list of defending parties (1 - 3)
 function attack_physical(attacker, attack_object, target_array){
 	
+	//prints out attack name on use
+	array_push(obj_turn_stats.text, attacker.name + " used " + string(attack_object.name));
+	
 	for(i = 0; i < array_length(target_array); i++){
 		
 		//show_debug_message("Attacker: " + attacker.name + " | attack_object: " + attack_object.name + " | Target: " + target_array[i].name);
@@ -21,12 +24,11 @@ function attack_physical(attacker, attack_object, target_array){
 		}
 		
 		target_array[i].hp -= attacker.damage * attack_object.damage_multiplier * weakness_mult;
+		array_push(obj_turn_stats.text, target_array[i].name + " took " + string(attacker.damage * attack_object.damage_multiplier * weakness_mult) + " damage");
 		elemental_chance(attack_object.element, target_array[i]);
-		
-		//prints out attack name on use
-		array_push(obj_pop_up.text, attacker.name + ": " + string(attack_object.name));
-		
 	}
+	
+	array_push(obj_turn_stats.text, " ");
 	
 }
 
@@ -36,7 +38,8 @@ function attack_physical(attacker, attack_object, target_array){
 /// @param {obj} target_array- The list of defending parties (1 - 3)
 function attack_magical(attacker, attack_object, target_array){
 	
-	//show_debug_message("Attacker: " + attacker.name + " | attack_object: " + attack_object.name + " | Target: " + target_array[0].name);
+	//prints out attack name on use
+	array_push(obj_turn_stats.text, attacker.name + " used " + string(attack_object.name));
 	
 	for(i = 0; i < array_length(target_array); i++){
 		//Calculates Elemental Weakness
@@ -48,18 +51,18 @@ function attack_magical(attacker, attack_object, target_array){
 		
 		if(attacker.elemental_energy >= attack_object.cost){
 			target_array[i].hp -= attacker.damage * attack_object.damage_multiplier * weakness_mult;
+			array_push(obj_turn_stats.text, target_array[i].name + " took " + string(attacker.damage * attack_object.damage_multiplier * weakness_mult) + " damage");
 			elemental_chance_magic(attack_object.element, target_array[i]);
 		}else{
 			attack_object = attack_failed_spell;
-			target_array[i].hp -= attacker.damage * attack_object.damage_multiplier;	
+			target_array[i].hp -= attacker.damage * attack_object.damage_multiplier;
+			array_push(obj_turn_stats.text, target_array[i].name + " took " + string(attacker.damage * attack_object.damage_multiplier) + " damage");
 		}
-		
-		//prints out attack name on use
-		array_push(obj_pop_up.text, attacker.name + ": " + string(attack_object.name));
 		
 	}
 	
 	attacker.elemental_energy -= attack_object.cost;
+	array_push(obj_turn_stats.text, " ");
 	
 }
 

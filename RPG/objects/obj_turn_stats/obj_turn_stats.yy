@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_pop_up",
-    "path": "sprites/spr_pop_up/spr_pop_up.yy",
+    "name": "spr_menu_backdrop",
+    "path": "sprites/spr_menu_backdrop/spr_menu_backdrop.yy",
   },
   "solid": false,
   "visible": true,
@@ -38,7 +38,7 @@
     "path": "folders/Objects/Battle Objects/Menus and Displays.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_pop_up",
+  "name": "obj_turn_stats",
   "tags": [],
   "resourceType": "GMObject",
 }

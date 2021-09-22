@@ -2,7 +2,7 @@
 
 //Options for main command
 command[0] = "Attack";
-command[1] = "Strategy";
+command[1] = "Inspect";
 command[2] = "Item";
 command[3] = "Run";
 
@@ -22,11 +22,6 @@ for(i = 0; i < instance_number(obj_attack_magical); i++){
 	magic[i] = instance_find(obj_attack_magical,i);
 }
 array_push(magic, "Back");
-
-//Strategy Menu Options
-strat[0] = "Inspect";
-strat[1] = "Enhance Attack";
-strat[2] = "Back";
 
 //Initialize elsewhere
 item[0] = "empty"

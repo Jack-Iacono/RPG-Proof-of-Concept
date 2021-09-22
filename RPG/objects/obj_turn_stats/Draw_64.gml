@@ -10,3 +10,5 @@ for(i = 0; i < array_length(text); i++){
 if(array_length(text) > max_length){
 	array_delete(text,0,array_length(text) - max_length);
 }
+
+image_yscale = total_list_height(text, seperation) / 50;

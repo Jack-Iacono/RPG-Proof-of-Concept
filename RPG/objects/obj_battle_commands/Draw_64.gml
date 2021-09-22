@@ -18,10 +18,6 @@ switch(section){
 		print_menu_battle_varied(magic, text_spacing, 80, 60, cursor_opt, text_color1, text_color2, text_color3);
 		text_array = magic;
 		break;
-	case 4:
-		print_menu_battle(strat, text_spacing, 80, 60, cursor_opt, text_color1, text_color2, text_color3);
-		text_array = strat;
-		break;
 	case 5:
 		print_menu_battle(item, text_spacing, 80, 60, cursor_opt, text_color1, text_color2, text_color3);
 		text_array = item;
