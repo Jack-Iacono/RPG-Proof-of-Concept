@@ -5,5 +5,5 @@ if(text = ""){
 }else{
 	sprite_index = spr_inspect_backdrop;
 	//show_debug_message(string(string_height_ext(text,seperation,width)));
-	image_yscale = string_height_ext(text,seperation,width) / 14;
+	image_yscale = (string_height_ext(text,seperation,width) + 40) / 15;
 }
