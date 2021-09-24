@@ -148,7 +148,7 @@ switch(section){
 			section = 7;
 		
 		}else if(cursor_opt = array_length(enemy) - 1 && section = 8){
-			section = 4;
+			section = 0;
 		}
 		
 		break;

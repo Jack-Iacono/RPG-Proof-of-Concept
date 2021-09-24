@@ -12,9 +12,6 @@ switch(section){
 	case 3:
 		menu_down(magic);
 		break;
-	case 4:
-		menu_down(strat);
-		break;
 	case 5:
 		menu_down(item);
 		break;
