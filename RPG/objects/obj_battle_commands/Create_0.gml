@@ -1,5 +1,10 @@
 /// @description Initializes array options and car settings
 
+//Sets position
+x = 0;
+y = 0;
+
+
 //Options for main command
 command[0] = "Attack";
 command[1] = "Inspect";

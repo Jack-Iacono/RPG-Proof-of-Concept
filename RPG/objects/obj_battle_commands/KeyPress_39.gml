@@ -1,3 +1,5 @@
+/// @description 
+
 switch(section){
 	
 	case 0:
@@ -23,11 +25,3 @@ switch(section){
 		break;
 
 }
-
-/*Section Number List
-0: command
-1: Attack
-	2: Physical Menu
-	3: Magic Menu
-4: Strategy
-5:Item Menu

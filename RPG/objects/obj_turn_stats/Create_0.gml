@@ -1,4 +1,9 @@
 /// @description Initialize stuff
+
+//Sets position
+x = 960;
+y = 540;
+
 text[0] = "";
 array_delete(text,0,1);
 

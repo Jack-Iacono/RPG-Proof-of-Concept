@@ -11,11 +11,11 @@ switch(section){
 		text_array = attack;
 		break;
 	case 2:
-		print_menu_battle_varied(physical, text_spacing, 80, 60, cursor_opt, text_color1, text_color2, text_color3);
+		print_menu_battle_varied_attacks(physical, text_spacing, 80, 60, cursor_opt, text_color1, text_color2, text_color3);
 		text_array = physical;
 		break;
 	case 3:
-		print_menu_battle_varied(magic, text_spacing, 80, 60, cursor_opt, text_color1, text_color2, text_color3);
+		print_menu_battle_varied_attacks(magic, text_spacing, 80, 60, cursor_opt, text_color1, text_color2, text_color3);
 		text_array = magic;
 		break;
 	case 5:
@@ -23,7 +23,8 @@ switch(section){
 		text_array = item;
 		break;
 	case 6:
-		print_menu_battle_varied(enemy, text_spacing, 80, 60, cursor_opt, text_color1, text_color2, text_color3);
+		//Can stop from displaying later so that other targetting method works
+		print_menu_battle_varied_attacks(enemy, text_spacing, 80, 60, cursor_opt, text_color1, text_color2, text_color3);
 		text_array = enemy;
 		break;
 	case 7:

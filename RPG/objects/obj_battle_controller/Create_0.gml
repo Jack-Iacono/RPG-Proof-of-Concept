@@ -1,6 +1,68 @@
 /// @description Storage for variables and stuff needed later should also set up battle
 
-//obj_battle_commands.section = 0;
+//Sets Things that have to be initialized
+
+	//Sets actors to be spawned
+	actors_spawn[0] = obj_player_battle;
+	actors_spawn[1] = enemy_slime;
+	actors_spawn[2] = enemy_slime_magma;
+	actors_spawn[3] = enemy_slime_poison;
+
+	//Sets attacks to be spawned (change later)
+	attacks_spawn[0] = attack_sword;
+	attacks_spawn[1] = attack_punch;
+	attacks_spawn[2] = attack_hammer;
+	attacks_spawn[3] = attack_flamewall;
+	attacks_spawn[4] = attack_poison_puddle;
+	attacks_spawn[5] = attack_ethereal_knife;
+	attacks_spawn[6] = attack_failed_spell;
+	attacks_spawn[7] = enemy_attack_slime;
+	attacks_spawn[8] = enemy_attack_slime_absorb;
+	attacks_spawn[9] = enemy_attack_slime_magma;
+	attacks_spawn[10] = enemy_attack_slime_poison;
+
+	//Sets elements to be spawned
+	elements_spawn[0] = element_flame;
+	elements_spawn[1] = element_poison;
+	elements_spawn[2] = element_none;
+	
+	//Sets Displays to be shown
+	display_spawn[0] = obj_battle_commands;
+	display_spawn[1] = obj_turn_stats;
+	display_spawn[2] = obj_general_display;
+	display_spawn[3] = obj_text_box;
+
+
+
+//Creates Instances
+
+	//Spawns Elements
+	for(i = 0; i < array_length(elements_spawn); i++){
+		instance_create_layer(x,y,"Attacks_Elements",elements_spawn[i]);	
+	}
+
+	//Spawns Attacks
+	for(i = 0; i < array_length(attacks_spawn); i++){
+		instance_create_layer(x,y,"Attacks_Elements",attacks_spawn[i]);
+	}
+
+	//Spawns Actors
+	for(i = 0; i < array_length(actors_spawn); i++){
+		instance_create_layer(x,y,"Actors",actors_spawn[i]);	
+	}
+	
+	//Spawns Displays
+	for(i = 0; i < array_length(display_spawn); i++){
+		instance_create_layer(x,y,"Displays",display_spawn[i]);	
+	}
+	
+	//Spawns Location controller
+	instance_create_layer(x,y,"Displays",obj_location_controller);
+
+
+
+
+
 
 //Initializes Arrays
 

@@ -135,9 +135,9 @@ for(i = 0; i < array_length(list); i++){
 /// @param {real} x_pos - The x position of the text (from top left)
 /// @param {real} y_pos - The y position of the text
 /// @param {integer} cursor_opt - The number representing the location of the cursor within a given array
-/// @param {color} color1 - The color of the inside of the text
-/// @param {color} color2 - The color of the outside of the non-selected text
-/// @param {color} color3 - The color of the outside of the selected text
+/// @param {color} color1 - The default color of the inside of the text
+/// @param {color} color2 - The default color of the outside of the non-selected text
+/// @param {color} color3 - The default color of the outside of the selected text
 function print_menu_battle_varied(list,text_spacing,x_pos, y_pos, cursor_opt, color1, color2, color3){
 	
 	for(i = 0; i < array_length(list)-1; i++){
@@ -159,6 +159,64 @@ function print_menu_battle_varied(list,text_spacing,x_pos, y_pos, cursor_opt, co
 			draw_text(view_xport[0]+x_pos, (view_yport[0]+y_pos) + (i*text_spacing)+4, list[i].name);
 			draw_text(view_xport[0]+x_pos, (view_yport[0]+y_pos) + (i*text_spacing-4), list[i].name);
 			draw_set_color(color1);
+			draw_text(view_xport[0]+x_pos, (view_yport[0]+y_pos) + (i*text_spacing), list[i].name);
+		}
+
+	}
+	
+	if(i = cursor_opt){
+		draw_set_color(color3);
+		draw_text(view_xport[0]+x_pos+4, (view_yport[0]+y_pos) + (i*text_spacing), "Back");
+		draw_text(view_xport[0]+x_pos-4, (view_yport[0]+y_pos) + (i*text_spacing), "Back");
+		draw_text(view_xport[0]+x_pos, (view_yport[0]+y_pos) + (i*text_spacing)+4, "Back");
+		draw_text(view_xport[0]+x_pos, (view_yport[0]+y_pos) + (i*text_spacing-4), "Back");
+		draw_set_color(color1);
+		draw_text(view_xport[0]+x_pos, (view_yport[0]+y_pos) + (i*text_spacing), "Back");
+	}else{
+		draw_set_color(color2);
+		draw_text(view_xport[0]+x_pos+4, (view_yport[0]+y_pos) + (i*text_spacing), "Back");
+		draw_text(view_xport[0]+x_pos-4, (view_yport[0]+y_pos) + (i*text_spacing), "Back");
+		draw_text(view_xport[0]+x_pos, (view_yport[0]+y_pos) + (i*text_spacing)+4, "Back");
+		draw_text(view_xport[0]+x_pos, (view_yport[0]+y_pos) + (i*text_spacing-4), "Back");
+		draw_set_color(color1);
+		draw_text(view_xport[0]+x_pos, (view_yport[0]+y_pos) + (i*text_spacing), "Back");
+	}
+	
+	draw_set_halign(fa_left);
+
+}
+
+
+/// @function print_menu_battle_varied_attacks(list, text_spacing, x_pos, y_pos, cursor_opt, color1, color2, color3);
+/// @param {array} list - The list to be printed out
+/// @param {real} text_spacing - The spacing between text vertically
+/// @param {real} x_pos - The x position of the text (from top left)
+/// @param {real} y_pos - The y position of the text
+/// @param {integer} cursor_opt - The number representing the location of the cursor within a given array
+/// @param {color} color1 - The default color of the inside of the text
+/// @param {color} color2 - The default color of the outside of the non-selected text
+/// @param {color} color3 - The default color of the outside of the selected text
+function print_menu_battle_varied_attacks(list,text_spacing,x_pos, y_pos, cursor_opt, color1, color2, color3){
+	
+	for(i = 0; i < array_length(list)-1; i++){
+		draw_set_font(font_menu);
+		draw_set_halign(fa_left);
+		
+		if(i = cursor_opt){
+			draw_set_color(color3);
+			draw_text(view_xport[0]+x_pos+4, (view_yport[0]+y_pos) + (i*text_spacing), list[i].name);
+			draw_text(view_xport[0]+x_pos-4, (view_yport[0]+y_pos) + (i*text_spacing), list[i].name);
+			draw_text(view_xport[0]+x_pos, (view_yport[0]+y_pos) + (i*text_spacing)+4, list[i].name);
+			draw_text(view_xport[0]+x_pos, (view_yport[0]+y_pos) + (i*text_spacing-4), list[i].name);
+			draw_set_color(list[i].element.color);
+			draw_text(view_xport[0]+x_pos, (view_yport[0]+y_pos) + (i*text_spacing), list[i].name);
+		}else{
+			draw_set_color(color2);
+			draw_text(view_xport[0]+x_pos+4, (view_yport[0]+y_pos) + (i*text_spacing), list[i].name);
+			draw_text(view_xport[0]+x_pos-4, (view_yport[0]+y_pos) + (i*text_spacing), list[i].name);
+			draw_text(view_xport[0]+x_pos, (view_yport[0]+y_pos) + (i*text_spacing)+4, list[i].name);
+			draw_text(view_xport[0]+x_pos, (view_yport[0]+y_pos) + (i*text_spacing-4), list[i].name);
+			draw_set_color(list[i].element.color);
 			draw_text(view_xport[0]+x_pos, (view_yport[0]+y_pos) + (i*text_spacing), list[i].name);
 		}
 
