@@ -27,6 +27,7 @@
     {"propertyId":{"name":"damage_multiplier","path":"objects/obj_attack/obj_attack.yy",},"objectId":{"name":"obj_attack","path":"objects/obj_attack/obj_attack.yy",},"value":"0.8","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"name","path":"objects/obj_attack/obj_attack.yy",},"objectId":{"name":"obj_attack","path":"objects/obj_attack/obj_attack.yy",},"value":"Slice","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"targets","path":"objects/obj_attack/obj_attack.yy",},"objectId":{"name":"obj_attack","path":"objects/obj_attack/obj_attack.yy",},"value":"2","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"targets_string","path":"objects/obj_attack/obj_attack.yy",},"objectId":{"name":"obj_attack","path":"objects/obj_attack/obj_attack.yy",},"value":"2","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "Physical Attacks",

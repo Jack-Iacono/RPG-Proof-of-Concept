@@ -38,6 +38,16 @@ enemy[1] = "Back";
 //initialize target array
 target_array[0] = obj_enemy_battle;
 
+//Initializes all attack array
+all_attack[0] = "All";
+all_attack[1] = "Back";
+
+//I'm just too lazy to make a new function to print this
+cont[0] = "Press";
+cont[1] = "Enter";
+cont[2] = "To";
+cont[3] = "Continue";
+
 
 cursor_y[0] = 700;
 

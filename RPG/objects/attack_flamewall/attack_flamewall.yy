@@ -28,6 +28,7 @@
     {"propertyId":{"name":"name","path":"objects/obj_attack/obj_attack.yy",},"objectId":{"name":"obj_attack","path":"objects/obj_attack/obj_attack.yy",},"value":"Flame Wall","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"targets","path":"objects/obj_attack/obj_attack.yy",},"objectId":{"name":"obj_attack","path":"objects/obj_attack/obj_attack.yy",},"value":"3","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"cost","path":"objects/obj_attack_magical/obj_attack_magical.yy",},"objectId":{"name":"obj_attack_magical","path":"objects/obj_attack_magical/obj_attack_magical.yy",},"value":"10","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"targets_string","path":"objects/obj_attack/obj_attack.yy",},"objectId":{"name":"obj_attack","path":"objects/obj_attack/obj_attack.yy",},"value":"All","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "Magic Attacks",

@@ -27,6 +27,7 @@
     {"propertyId":{"name":"damage_multiplier","path":"objects/obj_attack/obj_attack.yy",},"objectId":{"name":"obj_attack","path":"objects/obj_attack/obj_attack.yy",},"value":"0.75","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"name","path":"objects/obj_attack/obj_attack.yy",},"objectId":{"name":"obj_attack","path":"objects/obj_attack/obj_attack.yy",},"value":"Mash","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"targets","path":"objects/obj_attack/obj_attack.yy",},"objectId":{"name":"obj_attack","path":"objects/obj_attack/obj_attack.yy",},"value":"3","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"targets_string","path":"objects/obj_attack/obj_attack.yy",},"objectId":{"name":"obj_attack","path":"objects/obj_attack/obj_attack.yy",},"value":"All","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "Physical Attacks",

@@ -82,7 +82,7 @@ if(start_fight){
 	
 	start_fight = false;
 	start_effects = true;
-	obj_battle_commands.section = 0;
+	obj_battle_commands.section = 7;
 	
 	array_delete(cmd_selection,0,array_length(cmd_selection));
 	array_delete(turn_order,0,array_length(turn_order));
@@ -140,7 +140,7 @@ if(start_effects){
 	
 	
 	start_effects = false;
-	obj_battle_commands.section = 0;
+	obj_battle_commands.section = 7;
 }	
 
 

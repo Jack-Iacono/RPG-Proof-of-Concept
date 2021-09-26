@@ -100,8 +100,10 @@ function print_text_box(x, y, color1, color2, str, sep, width, font){
 function print_menu_battle(list,text_spacing,x_pos, y_pos, cursor_opt, color1, color2, color3){
 	
 	//Change to draw_text-ext at some point, I'm just lazy right now
+	//I am likewise lazy, thank Past Jack
+	//Me too, btw i'm only here like 30 minutes later than that Jack, but my code works. hehe
 	
-for(i = 0; i < array_length(list); i++){
+	for(i = 0; i < array_length(list); i++){
 		draw_set_font(font_menu);
 		draw_set_halign(fa_left);
 		
@@ -197,6 +199,54 @@ function print_menu_battle_varied(list,text_spacing,x_pos, y_pos, cursor_opt, co
 /// @param {color} color2 - The default color of the outside of the non-selected text
 /// @param {color} color3 - The default color of the outside of the selected text
 function print_menu_battle_varied_attacks(list,text_spacing,x_pos, y_pos, cursor_opt, color1, color2, color3){
+	
+	for(i = 0; i < array_length(list)-1; i++){
+		draw_set_font(font_menu);
+		draw_set_halign(fa_left);
+		
+		if(i = cursor_opt){
+			draw_set_color(color3);
+			draw_text(view_xport[0]+x_pos+4, (view_yport[0]+y_pos) + (i*text_spacing), list[i].name + ":  " + list[i].targets_string);
+			draw_text(view_xport[0]+x_pos-4, (view_yport[0]+y_pos) + (i*text_spacing), list[i].name + ":  " + list[i].targets_string);
+			draw_text(view_xport[0]+x_pos, (view_yport[0]+y_pos) + (i*text_spacing)+4, list[i].name + ":  " + list[i].targets_string);
+			draw_text(view_xport[0]+x_pos, (view_yport[0]+y_pos) + (i*text_spacing-4), list[i].name + ":  " + list[i].targets_string);
+			draw_set_color(list[i].element.color);
+			draw_text(view_xport[0]+x_pos, (view_yport[0]+y_pos) + (i*text_spacing), list[i].name + ":  " + list[i].targets_string);
+		}else{
+			draw_set_color(color2);
+			draw_text(view_xport[0]+x_pos+4, (view_yport[0]+y_pos) + (i*text_spacing), list[i].name + ":  " + list[i].targets_string);
+			draw_text(view_xport[0]+x_pos-4, (view_yport[0]+y_pos) + (i*text_spacing), list[i].name + ":  " + list[i].targets_string);
+			draw_text(view_xport[0]+x_pos, (view_yport[0]+y_pos) + (i*text_spacing)+4, list[i].name + ":  " + list[i].targets_string);
+			draw_text(view_xport[0]+x_pos, (view_yport[0]+y_pos) + (i*text_spacing-4), list[i].name + ":  " + list[i].targets_string);
+			draw_set_color(list[i].element.color);
+			draw_text(view_xport[0]+x_pos, (view_yport[0]+y_pos) + (i*text_spacing), list[i].name + ":  " + list[i].targets_string);
+		}
+
+	}
+	
+	if(i = cursor_opt){
+		draw_set_color(color3);
+		draw_text(view_xport[0]+x_pos+4, (view_yport[0]+y_pos) + (i*text_spacing), "Back");
+		draw_text(view_xport[0]+x_pos-4, (view_yport[0]+y_pos) + (i*text_spacing), "Back");
+		draw_text(view_xport[0]+x_pos, (view_yport[0]+y_pos) + (i*text_spacing)+4, "Back");
+		draw_text(view_xport[0]+x_pos, (view_yport[0]+y_pos) + (i*text_spacing-4), "Back");
+		draw_set_color(color1);
+		draw_text(view_xport[0]+x_pos, (view_yport[0]+y_pos) + (i*text_spacing), "Back");
+	}else{
+		draw_set_color(color2);
+		draw_text(view_xport[0]+x_pos+4, (view_yport[0]+y_pos) + (i*text_spacing), "Back");
+		draw_text(view_xport[0]+x_pos-4, (view_yport[0]+y_pos) + (i*text_spacing), "Back");
+		draw_text(view_xport[0]+x_pos, (view_yport[0]+y_pos) + (i*text_spacing)+4, "Back");
+		draw_text(view_xport[0]+x_pos, (view_yport[0]+y_pos) + (i*text_spacing-4), "Back");
+		draw_set_color(color1);
+		draw_text(view_xport[0]+x_pos, (view_yport[0]+y_pos) + (i*text_spacing), "Back");
+	}
+	
+	draw_set_halign(fa_left);
+
+}
+
+function print_menu_battle_varied_elements(list,text_spacing,x_pos, y_pos, cursor_opt, color1, color2, color3){
 	
 	for(i = 0; i < array_length(list)-1; i++){
 		draw_set_font(font_menu);
