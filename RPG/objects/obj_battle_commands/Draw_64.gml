@@ -24,7 +24,7 @@ switch(section){
 		break;
 	case 6:
 		if(selections = 3){
-			print_menu_battle_varied_attacks(all_attack, text_spacing, text_x, text_y, cursor_opt, text_color1, text_color2, text_color3);
+			print_menu_battle(all_attack, text_spacing, text_x, text_y, cursor_opt, text_color1, text_color2, text_color3);
 		}else{
 			print_menu_battle_varied_elements(enemy, text_spacing, text_x, text_y, cursor_opt, text_color1, text_color2, text_color3);
 			text_array = enemy;

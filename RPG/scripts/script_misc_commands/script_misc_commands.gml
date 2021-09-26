@@ -7,3 +7,11 @@ function delete_target_markers(){
 	}
 
 }
+
+function delete_inspect_markers(){
+
+	for(i = instance_number(obj_inspect_marker); i >= 0; i--){
+		instance_destroy(instance_find(obj_inspect_marker,i));	
+	}
+
+}

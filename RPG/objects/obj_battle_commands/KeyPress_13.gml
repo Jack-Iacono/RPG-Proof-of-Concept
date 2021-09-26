@@ -190,6 +190,7 @@ switch(section){
 		break;
 		
 	case 7:
+		delete_inspect_markers();
 		delete_target_markers();
 		section = 0;
 		break;
@@ -202,11 +203,14 @@ switch(section){
 			array_push(obj_battle_controller.attack_object, obj_attack_physical);
 			array_push(obj_battle_controller.player_target_array, enemy[cursor_opt]);
 			
+			instance_create_layer(enemy[cursor_opt].x,enemy[cursor_opt].y - (enemy[cursor_opt].sprite_height / 6),"Displays",obj_inspect_marker);
+			
 			end_turn();
 			section = 7;
 		
 		}else if(cursor_opt = array_length(enemy) - 1 && section = 8){
 			section = 0;
+			delete_inspect_markers();
 		}
 		
 		break;
