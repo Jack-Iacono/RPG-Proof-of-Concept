@@ -50,12 +50,6 @@ switch(section){
 			selections = attack_object.targets;
 			array_delete(target_array, 0, array_length(target_array));
 			
-			//Need for all attack option
-			if(selections = 3){
-				for(i = 0; i < array_length(enemy) - 1; i++){
-					instance_create_layer(enemy[i].x,enemy[i].y - (enemy[i].sprite_height / 4),"Displays",obj_target_marker);
-				}	
-			}
 			
 			section = 6;
 			
@@ -73,13 +67,7 @@ switch(section){
 			//Decides how many Enemies can be targetted
 			selections = attack_object.targets;
 			array_delete(target_array, 0, array_length(target_array));
-			
-			//Need for all attack option
-			if(selections = 3){
-				for(i = 0; i < array_length(enemy) - 1; i++){
-					instance_create_layer(enemy[i].x,enemy[i].y - (enemy[i].sprite_height / 4),"Displays",obj_target_marker);
-				}	
-			}
+
 			
 			section = 6;
 		}else if(cursor_opt = array_length(magic) - 1){
@@ -103,6 +91,7 @@ switch(section){
 				
 				for(i = 0; i < array_length(enemy) - 1; i++){
 					target_array[i] = enemy[i];	
+					instance_create_layer(enemy[i].x,enemy[i].y - (enemy[i].sprite_height / 4),"Displays",obj_target_marker);
 				}
 				
 				if(attack_type == obj_attack_physical){
@@ -133,8 +122,6 @@ switch(section){
 				
 					array_delete(target_array, 0, array_length(target_array));
 					end_turn();
-					
-					delete_target_markers();
 				
 			}else if(cursor_opt = array_length(all_attack) - 1 && section = 6){
 				delete_target_markers();
