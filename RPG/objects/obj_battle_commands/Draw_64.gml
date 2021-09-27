@@ -43,6 +43,9 @@ switch(section){
 		break;
 	case 8:
 		print_menu_battle_varied_elements(enemy, text_spacing, text_x, text_y, cursor_opt, text_color1, text_color2, text_color3);
+		if(enemy[cursor_opt] != "Back"){
+				draw_sprite(spr_inspect_marker,1,enemy[cursor_opt].x,enemy[cursor_opt].y - (enemy[cursor_opt].sprite_height / 6));
+		}
 		text_array = enemy;
 		break;
 		
