@@ -5,8 +5,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "obj_Item_damage",
-    "path": "objects/obj_Item_damage/obj_Item_damage.yy",
+    "name": "obj_item",
+    "path": "objects/obj_item/obj_item.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -22,15 +22,13 @@
   "physicsShapePoints": [],
   "eventList": [],
   "properties": [],
-  "overriddenProperties": [
-    {"propertyId":{"name":"element","path":"objects/obj_Item_damage/obj_Item_damage.yy",},"objectId":{"name":"obj_Item_damage","path":"objects/obj_Item_damage/obj_Item_damage.yy",},"value":"element_none","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-  ],
+  "overriddenProperties": [],
   "parent": {
-    "name": "Damage Items",
-    "path": "folders/Objects/Battle Objects/Items/Damage Items.yy",
+    "name": "Health Items",
+    "path": "folders/Objects/Battle Objects/Items/Health Items.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_rocket",
+  "name": "obj_item_heal",
   "tags": [],
   "resourceType": "GMObject",
 }

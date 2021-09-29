@@ -21,6 +21,9 @@ switch(section){
 	case 8:
 		menu_down(enemy);
 		break;
+	case 9:
+		menu_down(enemy);
+		break;
 
 }
 

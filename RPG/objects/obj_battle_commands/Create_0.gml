@@ -23,14 +23,21 @@ physical[2] = attack_sword;
 physical[3] = "Back";
 
 //Magic Attack Options
+magic[0] = obj_attack;
+array_delete(magic,0,1);
 for(i = 0; i < instance_number(obj_attack_magical); i++){
-	magic[i] = instance_find(obj_attack_magical,i);
+	//magic[i] = instance_find(obj_attack_magical,i);
+	if(instance_find(obj_attack_magical,i) != attack_failed_spell){
+		array_push(magic,instance_find(obj_attack_magical,i));
+	}
 }
 array_push(magic, "Back");
 
-//Initialize elsewhere
-item[0] = "empty"
-item[1] = "Back";
+//Initialize Items (Change to work like magic attacks do
+item[0] = item_bandage;
+item[1] = item_rocket;
+item[2] = item_poison_meat;
+array_push(item, "Back");
 
 //Initialize Enemy Array
 enemy[1] = "Back";

@@ -97,6 +97,34 @@ function elemental_chance_magic(element, target){
 	}
 }
 
+/// @function elemental_chance_item(element, target)
+/// @param {obj_element} element - The element which is to be tested for hit
+/// @param {obj_target} target - The target which is to be inflicted with the status
+function elemental_chance_item(element, target){
+	
+	refresh_index = -1;
+	item_effect_chance = element.chance * 2.5;
+	
+	if(random(100) < item_effect_chance){
+			
+		for(counter = 0; counter < array_length(target.status_array); counter++){
+			if(target.status_array[counter].name = element.name){
+				refresh_index = counter;
+			}
+		}
+			
+		if(refresh_index != -1){
+			target.turn_array[refresh_index] = element.duration;
+				
+		}else{
+			array_push(obj_turn_stats.text,target.name + " got " + element.name);
+			array_push(target.status_array, element);
+			array_push(target.turn_array, element.duration);
+				
+		}
+	}
+}
+
 
 /// @function elemental_effect(element, target)
 /// @param {obj_element} element - The element which is cause it's effect

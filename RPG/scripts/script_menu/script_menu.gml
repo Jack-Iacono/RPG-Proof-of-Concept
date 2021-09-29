@@ -102,6 +102,7 @@ function print_menu_battle(list,text_spacing,x_pos, y_pos, cursor_opt, color1, c
 	//Change to draw_text-ext at some point, I'm just lazy right now
 	//I am likewise lazy, thank Past Jack
 	//Me too, btw i'm only here like 30 minutes later than that Jack, but my code works. hehe
+	//Damn Jack, why items gotta not print. why did you make so many print functions
 	
 	for(i = 0; i < array_length(list); i++){
 		draw_set_font(font_menu);
@@ -130,6 +131,9 @@ function print_menu_battle(list,text_spacing,x_pos, y_pos, cursor_opt, color1, c
 	draw_set_halign(fa_left);
 
 }
+
+
+
 
 /// @function print_menu_battle_varied(list, text_spacing, x_pos, y_pos, cursor_opt, color1, color2, color3);
 /// @param {array} list - The list to be printed out

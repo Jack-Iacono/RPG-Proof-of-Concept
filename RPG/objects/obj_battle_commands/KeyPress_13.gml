@@ -77,7 +77,26 @@ switch(section){
 	
 	case 5:
 	//Item list !! To be implemented !!
-		if(cursor_opt = array_length(item) - 1 && section = 5){
+	
+		if(cursor_opt < array_length(item) - 1){
+			if(item[cursor_opt] = obj_item_heal){
+				
+				use_item = item[cursor_opt];
+				
+				array_push(obj_battle_controller.cmd_selection, 3);
+				array_push(obj_battle_controller.turn_order, obj_player_battle);
+				array_push(obj_battle_controller.player_target_array, obj_player_battle);
+				array_push(obj_battle_controller.attack_object, obj_attack_physical);
+				obj_battle_controller.player_item = use_item;
+				
+				end_turn();
+				section = 7;
+				
+			}else{
+				use_item = item[cursor_opt];
+				section = 9;
+			}
+		}else if(cursor_opt = array_length(item) - 1 && section = 5){
 			section = 0;
 		}
 		break;
@@ -200,6 +219,26 @@ switch(section){
 			delete_inspect_markers();
 		}
 		
+		break;
+		
+	case 9:
+		if(cursor_opt < array_length(enemy) - 1){
+			
+			array_push(obj_battle_controller.cmd_selection, 3);
+			array_push(obj_battle_controller.turn_order, obj_player_battle);
+			array_push(obj_battle_controller.player_target_array, enemy[cursor_opt]);
+			array_push(obj_battle_controller.attack_object, obj_attack_physical);
+			obj_battle_controller.player_item = use_item;
+			
+			instance_create_layer(enemy[cursor_opt].x,enemy[cursor_opt].y - (enemy[cursor_opt].sprite_height / 6),"Displays",obj_inspect_marker);
+			
+			end_turn();
+			section = 7;
+		
+		}else if(cursor_opt = array_length(enemy) - 1 && section = 9){
+			section = 0;
+			delete_inspect_markers();
+		}
 		break;
 }
 

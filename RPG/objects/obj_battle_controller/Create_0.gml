@@ -32,7 +32,10 @@
 	display_spawn[2] = obj_general_display;
 	display_spawn[3] = obj_text_box;
 
-
+	//Sets items to be spawned
+	items_spawn[0] = item_bandage;
+	items_spawn[1] = item_rocket;
+	items_spawn[2] = item_poison_meat;
 
 //Creates Instances
 
@@ -59,7 +62,10 @@
 	//Spawns Location controller
 	instance_create_layer(x,y,"Displays",obj_location_controller);
 
-
+	//Spawns Items
+	for(i = 0; i < array_length(items_spawn); i++){
+		instance_create_layer(x,y,"Attacks_Elements",items_spawn[i]);	
+	}
 
 
 

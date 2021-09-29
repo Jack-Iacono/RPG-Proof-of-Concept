@@ -11,8 +11,6 @@ for(i = 0; i < instance_number(obj_enemyStand); i++){
 	anchors[i] = instance_find(obj_enemyStand,i);
 }
 
-
-	show_debug_message("Enemies Array Length: " + string(array_length(enemies)));
 for(i = 0; i < array_length(enemies); i++){
 	enemies[i].x = anchors[i].x;
 	enemies[i].y = anchors[i].y;

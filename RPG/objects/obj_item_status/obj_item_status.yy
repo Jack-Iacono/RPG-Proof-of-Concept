@@ -24,11 +24,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Damage Items",
-    "path": "folders/Objects/Battle Objects/Items/Damage Items.yy",
+    "name": "Status Items",
+    "path": "folders/Objects/Battle Objects/Items/Status Items.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_item_damage",
+  "name": "obj_item_status",
   "tags": [],
   "resourceType": "GMObject",
 }

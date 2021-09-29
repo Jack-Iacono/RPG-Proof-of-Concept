@@ -5,8 +5,6 @@ if(instance_number(obj_enemy_battle) = 0){
 	game_end();
 }
 
-show_debug_message(string(start_fight));
-
 //Sorts turn_order by speed stat
 if(array_length(turn_order) = instance_number(obj_enemy_battle) + 1 && !sorted){
 	
@@ -58,6 +56,24 @@ if(start_fight){
 			
 				case 2:
 					obj_text_box.text = player_target_array[0].desc;
+					break;
+				case 3:
+					show_debug_message("Inside Item Switch");
+					switch(player_item){
+						
+						case obj_item_damage:
+							use_item_damage(player_item, target_array);
+							break;
+						
+						case obj_item_status:
+							use_item_status(player_item, target_array);
+							break;
+						
+						case obj_item_heal:
+							use_item_health(player_item, target_array);
+							break;
+						
+					}
 					break;
 			}
 		
