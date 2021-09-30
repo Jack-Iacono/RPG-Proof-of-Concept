@@ -59,18 +59,18 @@ if(start_fight){
 					break;
 				case 3:
 					show_debug_message("Inside Item Switch");
-					switch(player_item){
+					switch(object_get_parent(player_item)){
 						
 						case obj_item_damage:
-							use_item_damage(player_item, target_array);
+							use_item_damage(player_item, player_target_array,obj_battle_commands);
 							break;
 						
 						case obj_item_status:
-							use_item_status(player_item, target_array);
+							use_item_status(player_item, player_target_array,obj_battle_commands);
 							break;
 						
 						case obj_item_heal:
-							use_item_health(player_item, target_array);
+							use_item_health(player_item, player_target_array,obj_battle_commands);
 							break;
 						
 					}

@@ -146,7 +146,6 @@ function elemental_effect(element, target){
 		
 		case element_flame:
 			target.hp -= element.element_damage;
-			//show_debug_message(target.name + " took " + string(element.element_damage) + " Flame Damage");
 			text_effect = string(element.element_damage) + " " + element.name;
 			break;
 		
@@ -159,9 +158,8 @@ function elemental_effect(element, target){
 			}
 			
 			//multiplies damage over time
-			target.hp -= element.element_damage * (element.duration - target.turn_array[status_index]);
-			//show_debug_message(target.name + " took " + string(element.element_damage * (element.duration - target.turn_array[status_index])) + " Poison Damage");
-			text_effect = string(element.element_damage * (element.duration - target.turn_array[status_index])) + " " + element.name;
+			target.hp -= element.element_damage * (element.duration - target.turn_array[status_index] + 1);
+			text_effect = string(element.element_damage * (element.duration - target.turn_array[status_index] + 1)) + " " + element.name;
 			break;
 		
 	}

@@ -79,7 +79,7 @@ switch(section){
 	//Item list !! To be implemented !!
 	
 		if(cursor_opt < array_length(item) - 1){
-			if(item[cursor_opt] = obj_item_heal){
+			if(object_get_parent(item[cursor_opt]) = obj_item_heal){
 				
 				use_item = item[cursor_opt];
 				
@@ -94,6 +94,9 @@ switch(section){
 				
 			}else{
 				use_item = item[cursor_opt];
+				selections = use_item.targets;
+				array_delete(target_array, 0, array_length(target_array));
+				//show_debug_message("Selections: " + string(selections));
 				section = 9;
 			}
 		}else if(cursor_opt = array_length(item) - 1 && section = 5){
@@ -222,22 +225,33 @@ switch(section){
 		break;
 		
 	case 9:
+	
 		if(cursor_opt < array_length(enemy) - 1){
 			
-			array_push(obj_battle_controller.cmd_selection, 3);
-			array_push(obj_battle_controller.turn_order, obj_player_battle);
-			array_push(obj_battle_controller.player_target_array, enemy[cursor_opt]);
-			array_push(obj_battle_controller.attack_object, obj_attack_physical);
-			obj_battle_controller.player_item = use_item;
+			array_push(target_array,enemy[cursor_opt]);
+			instance_create_layer(enemy[cursor_opt].x,enemy[cursor_opt].y - (enemy[cursor_opt].sprite_height / 6),"Displays",obj_target_marker);
 			
-			instance_create_layer(enemy[cursor_opt].x,enemy[cursor_opt].y - (enemy[cursor_opt].sprite_height / 6),"Displays",obj_inspect_marker);
 			
-			end_turn();
-			section = 7;
+			if(array_length(target_array) >= selections){
+				
+				array_push(obj_battle_controller.cmd_selection, 3);
+				array_push(obj_battle_controller.turn_order, obj_player_battle);
+				array_push(obj_battle_controller.player_target_array, enemy[cursor_opt]);
+				array_push(obj_battle_controller.attack_object, obj_attack_physical);
+				obj_battle_controller.player_item = use_item;
+			
+				for(i = 0; i < array_length(target_array); i++){
+					obj_battle_controller.player_target_array[i] = target_array[i];
+				}
+					
+				array_delete(target_array, 0, array_length(target_array));
+				end_turn();
+				section = 7;
+			}
 		
 		}else if(cursor_opt = array_length(enemy) - 1 && section = 9){
-			section = 0;
-			delete_inspect_markers();
+			delete_target_markers();
+			section = 5;
 		}
 		break;
 }
