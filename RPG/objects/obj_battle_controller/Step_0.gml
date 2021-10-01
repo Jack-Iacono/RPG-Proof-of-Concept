@@ -90,6 +90,23 @@ if(start_fight){
 					//show_debug_message("Turn_Order: " + turn_order[j].name + " | attack_object: " + attack_object[j].name + " | Target: " + enemy_target_array[0].name);
 					attack_magical(turn_order[j], attack_object[j], enemy_target_array);
 					break;
+					
+				case 2:
+					switch(object_get_parent(enemy_items[0])){
+						
+						case obj_item_damage:
+							use_item_damage(enemy_items[0], obj_player_battle, turn_order[j]);
+							break;
+							
+						case obj_item_heal:
+							use_item_health(enemy_items[0], obj_player_battle, turn_order[j]);
+							break;
+							
+						case obj_item_status:
+							use_item_status(enemy_items[0], obj_player_battle, turn_order[j]);
+							break;
+					
+					}
 			}
 		
 		}
@@ -104,6 +121,7 @@ if(start_fight){
 	array_delete(turn_order,0,array_length(turn_order));
 	array_delete(player_target_array,0,array_length(player_target_array));
 	array_delete(attack_object,0,array_length(attack_object));
+	//array_delete(enemy_items,0,array_length(enemy_items));
 	
 	sorted = false;
 }

@@ -68,8 +68,14 @@ function use_item_health(item, target_array,user){
 			case item_bandage:
 			
 				for(k = 0; k < array_length(target_array); k++){
-					target_array[k].hp += item.effect_amount;
-					text_effect = string(item.effect_amount);
+					
+					if(target_array[k].hp + item.effect_amount > target_array[k].max_hp){
+						target_array[k].hp += target_array[k].max_hp - target_array[k].hp;
+						text_effect = string(target_array[k].max_hp - target_array[k].hp);
+					}else{
+						target_array[k].hp += item.effect_amount;
+						text_effect = string(item.effect_amount);
+					}
 				}
 			
 				break;

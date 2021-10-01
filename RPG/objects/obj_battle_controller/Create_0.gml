@@ -33,9 +33,14 @@
 	display_spawn[3] = obj_text_box;
 
 	//Sets items to be spawned
-	items_spawn[0] = item_bandage;
-	items_spawn[1] = item_rocket;
-	items_spawn[2] = item_poison_meat;
+	items_spawn_player[0] = item_bandage;
+	items_spawn_player[1] = item_rocket;
+	items_spawn_player[2] = item_poison_meat;
+	
+	//Sets items to be spawned
+	items_spawn_enemy[0] = item_bandage;
+	items_spawn_enemy[1] = item_rocket;
+	items_spawn_enemy[2] = item_poison_meat;
 
 //Creates Instances
 
@@ -47,6 +52,16 @@
 	//Spawns Attacks
 	for(i = 0; i < array_length(attacks_spawn); i++){
 		instance_create_layer(x,y,"Attacks_Elements",attacks_spawn[i]);
+	}
+	
+	//Spawns Items
+	for(i = 0; i < array_length(items_spawn_player); i++){
+		instance_create_layer(x,y,"Attacks_Elements",items_spawn_player[i]);	
+	}
+	
+	//Spawns Items
+	for(i = 0; i < array_length(items_spawn_enemy); i++){
+		instance_create_layer(x,y,"Attacks_Elements",items_spawn_enemy[i]);	
 	}
 
 	//Spawns Actors
@@ -61,11 +76,6 @@
 	
 	//Spawns Location controller
 	instance_create_layer(x,y,"Displays",obj_location_controller);
-
-	//Spawns Items
-	for(i = 0; i < array_length(items_spawn); i++){
-		instance_create_layer(x,y,"Attacks_Elements",items_spawn[i]);	
-	}
 
 
 
@@ -83,6 +93,10 @@ array_delete(cmd_selection, 0, 1);
 
 turn_order[0] = obj_player_battle;
 array_delete(turn_order, 0, 1);
+
+enemy_items[0] = obj_item;
+array_delete(enemy_items, 0, 1);
+
 
 enemy_target_array[0] = obj_player_battle;
 
