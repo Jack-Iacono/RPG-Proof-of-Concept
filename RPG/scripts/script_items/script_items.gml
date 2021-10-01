@@ -3,6 +3,9 @@
 /// @param {list} target_array the array of targets
 /// @param {obj} user - The caller / user of the item
 function use_item_damage(item, target_array,user){
+	
+	array_push(obj_turn_stats.text, string(user.name) + " used " + string(item.name));
+	
 	for(k = 0; k < array_length(target_array); k++){
 		text_target = target_array[k].name;
 		
@@ -19,10 +22,10 @@ function use_item_damage(item, target_array,user){
 			elemental_chance(item.element,target_array[k]);	
 		}
 		array_push(obj_turn_stats.text, text_target + " took " +  string(text_effect) + " damage");
-		array_push(obj_turn_stats.text, " ");
 		
 	}
 	
+	array_push(obj_turn_stats.text, " ");
 	remove_item(item,user)
 	
 }
@@ -32,6 +35,9 @@ function use_item_damage(item, target_array,user){
 /// @param {list} target_array the array of targets
 /// @param {obj} user - The caller / user of the item
 function use_item_status(item, target_array,user){
+	
+	array_push(obj_turn_stats.text, string(user.name) + " used " + string(item.name));
+	
 	for(k = 0; k < array_length(target_array); k++){
 		switch(item){
 		
@@ -42,6 +48,7 @@ function use_item_status(item, target_array,user){
 		
 		}
 	}
+	array_push(obj_turn_stats.text, " ");
 	remove_item(item,user)
 }
 
@@ -50,6 +57,9 @@ function use_item_status(item, target_array,user){
 /// @param {list} target_array the array of targets
 /// @param {obj} user - The caller / user of the item
 function use_item_health(item, target_array,user){
+	
+	array_push(obj_turn_stats.text, string(user.name) + " used " + string(item.name));
+	
 	for(k = 0; k < array_length(target_array); k++){
 		text_target = target_array[k].name;
 		
@@ -67,9 +77,9 @@ function use_item_health(item, target_array,user){
 		}
 		
 		array_push(obj_turn_stats.text, text_target + " healed for " +  string(text_effect) + " health");
-		array_push(obj_turn_stats.text, " ");
 	}
 	
+	array_push(obj_turn_stats.text, " ");
 	remove_item(item,user)
 }
 
