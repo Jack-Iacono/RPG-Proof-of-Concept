@@ -134,7 +134,7 @@
             {"id":"825f1a9f-b92c-4f30-a2fc-053df572a080","Key":21.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"61f9c554-b653-42c4-a267-a01e02fed558","path":"sprites/spr_inspect_marker/spr_inspect_marker.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"8a3d1161-98e7-41a4-9050-2258389316cb","Key":22.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"450a4d9a-0216-455d-a3f1-d1ab70c90031","path":"sprites/spr_inspect_marker/spr_inspect_marker.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"b1179a78-9536-4a30-ba92-1b4303ae468f","Key":23.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"baf4666c-2cdc-4035-8259-b94c38036e82","path":"sprites/spr_inspect_marker/spr_inspect_marker.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": true,
@@ -162,7 +162,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Markers",
-    "path": "folders/Sprites/Markers.yy",
+    "path": "folders/Sprites/Battle Sprites/Markers.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_inspect_marker",
