@@ -1,5 +1,8 @@
 /// @description Storage for variables and stuff needed later should also set up battle
 
+actors_spawn[0] = obj_player_battle;
+
+/*
 //Sets Things that have to be initialized
 
 	//Sets actors to be spawned
@@ -107,3 +110,4 @@ randomize();
 
 //random_set_seed(2630065366);
 show_debug_message("Seed: " + string(random_get_seed()));
+*/

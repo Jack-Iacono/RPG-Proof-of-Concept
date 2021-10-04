@@ -1,0 +1,1 @@
+/// @description Sets player into battle when colliding with enemy
