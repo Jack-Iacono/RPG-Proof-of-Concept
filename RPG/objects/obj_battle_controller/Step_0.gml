@@ -126,7 +126,7 @@ if(room = room_battle){
 		array_delete(turn_order,0,array_length(turn_order));
 		array_delete(player_target_array,0,array_length(player_target_array));
 		array_delete(attack_object,0,array_length(attack_object));
-		//array_delete(enemy_items,0,array_length(enemy_items));
+		array_delete(enemy_items,0,array_length(enemy_items));
 	
 		sorted = false;
 	}

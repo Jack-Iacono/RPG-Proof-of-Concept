@@ -11,7 +11,7 @@ for(i = 0; i < enemy_amount; i++){
 	for(j = 0; j < items_allowed; j++){
 
 		item_type = irandom_range(0,array_length(possible_items)-1);
-		array_push(obj_battle_controller.items_spawn_enemy[i], items_spawn_enemy[item_type]);
+		obj_battle_controller.items_spawn_enemy[i][j] = possible_items[item_type];
 
 	}
 
@@ -24,17 +24,7 @@ for(j = 0; j < array_length(attacks); j++){
 		
 }
 
-//Sets player attacks into battle
-with(obj_battle_controller){
-	//Sets player stuff
-	if(room != room_battle){
-		for(i = 0; i < obj_player_overworld.attack_inventory; i++){
-			array_push(attacks_spawn, obj_player_overworld.attack_inventory[i]);
-		}
-	}	
-}
-
 
 
 show_debug_message("Assets Set");
-room = room_battle;
+obj_player_overworld.pass_info = true;

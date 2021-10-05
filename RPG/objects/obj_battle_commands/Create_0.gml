@@ -33,10 +33,10 @@ for(i = 0; i < instance_number(obj_attack_magical); i++){
 }
 array_push(magic, "Back");
 
-//Initialize Items (Change to work like magic attacks do
-item[0] = item_bandage;
-item[1] = item_rocket;
-item[2] = item_poison_meat;
+//Initialize Items (Change to work like magic attacks do, No)
+for(i = 0; i < array_length(obj_player_battle.item); i++){
+	item[i] = obj_player_battle.item[i];
+}
 array_push(item, "Back");
 
 //Initialize Enemy Array

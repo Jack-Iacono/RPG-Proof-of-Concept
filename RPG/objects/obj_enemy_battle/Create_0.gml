@@ -4,7 +4,7 @@
 //Initialize Enemy Inventory (Do Later, have to create item system)
 for(i = 0; i < items_allowed; i++){
 	show_debug_message("Ran Loop");
-	item[i] = obj_battle_controller.items_spawn_enemy[random(array_length(obj_battle_controller.items_spawn_enemy)) - 1];
+	//item[i] = obj_battle_controller.items_spawn_enemy[random(array_length(obj_battle_controller.items_spawn_enemy)) - 1];
 }
 
 //Initialize Target Array for attack phase
@@ -17,3 +17,7 @@ array_delete(status_array, 0, 1);
 //Initialize Turn Array
 turn_array[0] = element_flame.duration;
 array_delete(turn_array, 0, 1);
+
+//Initialize Item Array
+item[0] = pointer_null;
+array_delete(item, 0 ,1);

@@ -4,7 +4,9 @@
 /// @param {obj} user - The caller / user of the item
 function use_item_damage(item, target_array,user){
 	
-	array_push(obj_turn_stats.text, string(user.name) + " used " + string(item.name));
+	show_debug_message("User: " + user.name);
+	show_debug_message("Item: " + item.name);
+	array_push(obj_turn_stats.text, user.name + " used " + item.name);
 	
 	for(k = 0; k < array_length(target_array); k++){
 		text_target = target_array[k].name;
