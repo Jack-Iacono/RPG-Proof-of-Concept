@@ -26,7 +26,6 @@ physical[3] = "Back";
 magic[0] = obj_attack;
 array_delete(magic,0,1);
 for(i = 0; i < instance_number(obj_attack_magical); i++){
-	//magic[i] = instance_find(obj_attack_magical,i);
 	if(instance_find(obj_attack_magical,i) != attack_failed_spell){
 		array_push(magic,instance_find(obj_attack_magical,i));
 	}

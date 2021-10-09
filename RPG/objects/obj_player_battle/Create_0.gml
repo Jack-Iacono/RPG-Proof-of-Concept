@@ -4,13 +4,15 @@ x = obj_playerStand.x;
 y = obj_playerStand.y;
 
 //Initialize Status Array,  come back to this
-status_array[0] = pointer_null;
-array_delete(status_array, 0, 1);
+status_array = array_create(0);
 
 //Initialize Turn Array
-turn_array[0] = pointer_null;
-array_delete(turn_array, 0, 1);
+turn_array = array_create(0);
 
 //Initializes Item Array
-item[0] = pointer_null;
-array_delete(item,0,1);
+item = array_create(0);
+
+//Sets Player Health and elementel energy
+max_hp = obj_pass_controller.player_max_hp;
+hp = obj_pass_controller.player_hp;
+elemental_energy = obj_pass_controller.player_ee;

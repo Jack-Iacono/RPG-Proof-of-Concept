@@ -65,5 +65,6 @@ switch(section){
 //Hey Jack, come here often?
 //More often than I'd like to admit
 //Text array adjusts textbox size, it's important
+//Not sure what you lot are arguing about, I'm in mid terms week
 
 

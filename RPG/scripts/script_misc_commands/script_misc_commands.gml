@@ -15,3 +15,13 @@ function delete_inspect_markers(){
 	}
 
 }
+
+/// @function array_initialize(array_name, calling_instance);
+/// @param {array} array_name - The name of the array to be cleared
+/// @param {obj} calling_instance - The object for whom the array is being initialized
+function array_clear(array_name, calling_instance){
+	with(calling_instance){
+		array_delete(calling_instance, 0, array_length(array_name));
+	}
+}
+	

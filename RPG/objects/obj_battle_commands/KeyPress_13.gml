@@ -16,7 +16,7 @@ switch(section){
 				break;
 			case 3:
 				//Change out for run away later, need to delete controllers
-				game_end();
+				obj_battle_controller.pass_info = true;
 				break;
 		}
 		break;

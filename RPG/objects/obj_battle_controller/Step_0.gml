@@ -5,9 +5,7 @@ if(room = room_battle){
 
 	if(instance_number(obj_enemy_battle) = 0){
 		//Transition out of battle, put here
-		game_end();
-		
-		//add deletes for all arrays
+		pass_info = true;
 	}
 
 	//Sorts turn_order by speed stat
@@ -180,6 +178,32 @@ if(room = room_battle){
 	
 		start_effects = false;
 		obj_battle_commands.section = 7;
+	}
+		
+	if(pass_info){
+		
+		instance_destroy(asset_get_index(obj_location_controller));
+		instance_destroy(asset_get_index(obj_general_display));
+		instance_destroy(asset_get_index(obj_text_box));
+		instance_destroy(asset_get_index(obj_turn_stats));
+		
+		obj_pass_controller.player_hp = obj_player_battle.hp;
+		obj_pass_controller.player_max_hp = obj_player_battle.max_hp;
+		obj_pass_controller.player_ee = obj_player_battle.elemental_energy;
+		
+		for(i = 0; i < array_length(obj_player_battle.item); i++){
+			obj_pass_controller.player_item[i] = obj_player_battle.item[i];
+		}
+		
+		array_clear(items_spawn_enemy,self.id);
+		array_clear(items_spawn_player,self.id);
+		array_clear(attacks_spawn, self.id);
+		
+		obj_pass_controller.set_player_values = true;
+		
+		room = obj_pass_controller.return_room;
+		
+		pass_info = false;
 	}
 }
 

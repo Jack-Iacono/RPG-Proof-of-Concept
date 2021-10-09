@@ -22,19 +22,3 @@ if(control){
 		y += v_move * walk_speed;
 	}
 }
-
-if(pass_info){
-	
-	//Passes all attacks to battle controller
-	for(i = 0; i < array_length(attack_inventory); i++){
-		array_push(obj_battle_controller.attacks_spawn,attack_inventory[i]);
-	}
-	
-	//Passes all items to battle controller
-	for(i = 0; i < array_length(item_inventory); i++){
-		array_push(obj_battle_controller.items_spawn_player, item_inventory[i]);	
-	}
-	
-	pass_info = false;
-	room = room_battle;
-}
