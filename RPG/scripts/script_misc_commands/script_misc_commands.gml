@@ -21,7 +21,7 @@ function delete_inspect_markers(){
 /// @param {obj} calling_instance - The object for whom the array is being initialized
 function array_clear(array_name, calling_instance){
 	with(calling_instance){
-		array_delete(calling_instance, 0, array_length(array_name));
+		array_delete(array_name, 0, array_length(array_name));
 	}
 }
 	

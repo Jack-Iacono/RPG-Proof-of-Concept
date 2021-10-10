@@ -55,14 +55,20 @@ if(pass_info){
 }
 	
 if(set_player_values && instance_exists(obj_player_overworld)){
-
+	
 	obj_player_overworld.hp = player_hp;
 	obj_player_overworld.max_hp = player_max_hp;
 	obj_player_overworld.elemental_energy = player_ee;
 	
+	array_clear(obj_player_overworld.item_inventory,obj_player_overworld);
+	
+	for(i = 0; i < array_length(player_items); i++){
+		obj_player_overworld.item_inventory[i] = player_items[i];	
+	}
+	
 	set_player_values = false;
 }
-	
+
 if(room = room_initialize){
 	room_goto_next();	
 }

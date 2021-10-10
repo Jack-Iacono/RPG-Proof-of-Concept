@@ -15,7 +15,7 @@ switch(section){
 				section = 5;
 				break;
 			case 3:
-				//Change out for run away later, need to delete controllers
+				//Sends signla to end battle
 				obj_battle_controller.pass_info = true;
 				break;
 		}

@@ -182,28 +182,34 @@ if(room = room_battle){
 		
 	if(pass_info){
 		
-		instance_destroy(asset_get_index(obj_location_controller));
-		instance_destroy(asset_get_index(obj_general_display));
-		instance_destroy(asset_get_index(obj_text_box));
-		instance_destroy(asset_get_index(obj_turn_stats));
+		instance_destroy(obj_location_controller);
+		instance_destroy(obj_general_display);
+		instance_destroy(obj_text_box);
+		instance_destroy(obj_turn_stats);
 		
 		obj_pass_controller.player_hp = obj_player_battle.hp;
 		obj_pass_controller.player_max_hp = obj_player_battle.max_hp;
 		obj_pass_controller.player_ee = obj_player_battle.elemental_energy;
 		
+		with(obj_pass_controller){
+			array_clear(player_items,self.id);	
+		}
+		
 		for(i = 0; i < array_length(obj_player_battle.item); i++){
-			obj_pass_controller.player_item[i] = obj_player_battle.item[i];
+			obj_pass_controller.player_items[i] = obj_player_battle.item[i];
 		}
 		
 		array_clear(items_spawn_enemy,self.id);
 		array_clear(items_spawn_player,self.id);
 		array_clear(attacks_spawn, self.id);
+		array_clear(actors_spawn,self.id);
+		
+		actors_spawn[0] = obj_player_battle;
 		
 		obj_pass_controller.set_player_values = true;
-		
-		room = obj_pass_controller.return_room;
-		
 		pass_info = false;
+		
+		room_goto(obj_pass_controller.return_room);
 	}
 }
 

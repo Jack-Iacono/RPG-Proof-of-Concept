@@ -47,8 +47,8 @@
   ],
   "overriddenProperties": [],
   "parent": {
-    "name": "Battle Controllers",
-    "path": "folders/Objects/Battle Objects/Battle Controllers.yy",
+    "name": "Game Controllers",
+    "path": "folders/Objects/Game Controllers.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_battle_controller",

@@ -1,5 +1,6 @@
 /// @description Storage for variables and stuff needed later should also set up battle
 
+//Not sure why, but this needs to be here
 actors_spawn[0] = obj_player_battle;
 
 //Initializes arrays
