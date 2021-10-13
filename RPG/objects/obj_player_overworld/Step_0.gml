@@ -11,6 +11,13 @@ if(control){
 	//converts above values to 1,0, or -1
 	h_move = right - left;
 	v_move = down - up;
+	
+	//Sets diagonal walk speed to match other walking speed
+	if(h_move != 0 && v_move != 0){
+		walk_speed = 5 * 0.707;	
+	}else{
+		walk_speed = 5;	
+	}
 
 	//Moves Player
 	if(!place_meeting(x + (h_move * walk_speed), y + (v_move * walk_speed), obj_wall)){

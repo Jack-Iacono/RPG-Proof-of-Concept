@@ -15,8 +15,9 @@ switch(section){
 				section = 5;
 				break;
 			case 3:
-				//Sends signla to end battle
+				//Sends signal to end battle and says that you ran away
 				obj_battle_controller.pass_info = true;
+				obj_pass_controller.run = true;
 				break;
 		}
 		break;
@@ -76,12 +77,11 @@ switch(section){
 		break;
 	
 	case 5:
-	//Item list !! To be implemented !!
 	
-		if(cursor_opt < array_length(item) - 1){
-			if(object_get_parent(item[cursor_opt]) = obj_item_heal){
+		if(cursor_opt < array_length(obj_player_battle.item) - 1){
+			if(object_get_parent(obj_player_battle.item[cursor_opt]) = obj_item_heal){
 				
-				use_item = item[cursor_opt];
+				use_item = obj_player_battle.item[cursor_opt];
 				
 				array_push(obj_battle_controller.cmd_selection, 3);
 				array_push(obj_battle_controller.turn_order, obj_player_battle);
@@ -93,13 +93,13 @@ switch(section){
 				section = 7;
 				
 			}else{
-				use_item = item[cursor_opt];
+				use_item = obj_player_battle.item[cursor_opt];
 				selections = use_item.targets;
 				array_delete(target_array, 0, array_length(target_array));
-				//show_debug_message("Selections: " + string(selections));
 				section = 9;
 			}
-		}else if(cursor_opt = array_length(item) - 1 && section = 5){
+			
+		}else if(cursor_opt = array_length(obj_player_battle.item) - 1 && section = 5){
 			section = 0;
 		}
 		break;

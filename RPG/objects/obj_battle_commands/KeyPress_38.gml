@@ -13,7 +13,7 @@ switch(section){
 		menu_up(magic);
 		break;
 	case 5:
-		menu_up(item);
+		menu_up(obj_player_battle.item);
 		break;
 	case 6:
 		menu_up(enemy);

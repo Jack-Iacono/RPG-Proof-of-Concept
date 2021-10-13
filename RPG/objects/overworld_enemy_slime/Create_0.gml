@@ -15,3 +15,6 @@ enemy_spawns[2] = enemy_slime_poison;
 possible_items[0] = item_bandage;
 possible_items[1] = item_rocket;
 possible_items[2] = item_poison_meat;
+
+//Does the storing for what enemies will spawn
+event_inherited();

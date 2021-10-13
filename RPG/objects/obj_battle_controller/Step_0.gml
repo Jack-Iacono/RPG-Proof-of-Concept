@@ -6,6 +6,7 @@ if(room = room_battle){
 	if(instance_number(obj_enemy_battle) = 0){
 		//Transition out of battle, put here
 		pass_info = true;
+		obj_pass_controller.run = false;
 	}
 
 	//Sorts turn_order by speed stat
@@ -61,19 +62,18 @@ if(room = room_battle){
 						obj_text_box.text = player_target_array[0].desc;
 						break;
 					case 3:
-						show_debug_message("Inside Item Switch");
 						switch(object_get_parent(player_item)){
 						
 							case obj_item_damage:
-								use_item_damage(player_item, player_target_array,obj_battle_commands);
+								use_item_damage(player_item, player_target_array,obj_player_battle);
 								break;
 						
 							case obj_item_status:
-								use_item_status(player_item, player_target_array,obj_battle_commands);
+								use_item_status(player_item, player_target_array,obj_player_battle);
 								break;
 						
 							case obj_item_heal:
-								use_item_health(player_item, player_target_array,obj_battle_commands);
+								use_item_health(player_item, player_target_array,obj_player_battle);
 								break;
 						
 						}
@@ -113,7 +113,6 @@ if(room = room_battle){
 				}
 		
 			}
-			//show_debug_message("Ran Through For Loop " + string(j) + " times");
 		}
 	
 		start_fight = false;
@@ -192,11 +191,14 @@ if(room = room_battle){
 		obj_pass_controller.player_ee = obj_player_battle.elemental_energy;
 		
 		with(obj_pass_controller){
-			array_clear(player_items,self.id);	
+			array_clear(player_items,self.id);
 		}
 		
-		for(i = 0; i < array_length(obj_player_battle.item); i++){
+		//Passes the current items to the pass controller
+		//Need "- 1" so that it doesn't pass "Back" at the end of the options
+		for(i = 0; i < array_length(obj_player_battle.item) - 1; i++){
 			obj_pass_controller.player_items[i] = obj_player_battle.item[i];
+			show_debug_message("Passed: " + obj_player_battle.item[i].name);
 		}
 		
 		array_clear(items_spawn_enemy,self.id);
@@ -208,6 +210,8 @@ if(room = room_battle){
 		
 		obj_pass_controller.set_player_values = true;
 		pass_info = false;
+		
+		obj_pass_controller.battle_over = true;
 		
 		room_goto(obj_pass_controller.return_room);
 	}

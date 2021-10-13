@@ -15,7 +15,7 @@ switch(section){
 		menu_down(magic);
 		break;
 	case 5:
-		menu_down(item);
+		menu_down(obj_player_battle.item);
 		break;
 	case 6:
 		menu_down(enemy);

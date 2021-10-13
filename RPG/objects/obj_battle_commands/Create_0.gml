@@ -33,10 +33,7 @@ for(i = 0; i < instance_number(obj_attack_magical); i++){
 array_push(magic, "Back");
 
 //Initialize Items (Change to work like magic attacks do, No)
-for(i = 0; i < array_length(obj_player_battle.item); i++){
-	item[i] = obj_player_battle.item[i];
-}
-array_push(item, "Back");
+item = array_create(0);
 
 //Initialize Enemy Array
 enemy[1] = "Back";
@@ -57,6 +54,5 @@ cont[3] = "Continue";
 
 cursor_y[0] = 700;
 
-text_array[0] = "";
-array_delete(text_array,0,1);
+text_array = array_create(0);
 		

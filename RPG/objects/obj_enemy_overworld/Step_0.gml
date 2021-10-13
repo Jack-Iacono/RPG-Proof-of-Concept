@@ -1,7 +1,7 @@
 /// @description Moves Around
 
 //If move timer has allowed movement or chase after player
-if(collision_circle(x,y,aggro_range, obj_player_overworld,false,true)){
+if(collision_circle(x,y,aggro_range, obj_player_overworld,false,true) && obj_player_overworld.collision){
 		move_towards_point(obj_player_overworld.x, obj_player_overworld.y, chase_speed);
 }else if(move){
 	

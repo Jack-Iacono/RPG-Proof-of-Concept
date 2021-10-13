@@ -61,6 +61,8 @@ if(room = room_battle){
 		show_debug_message("Pushed: " + items_spawn_player[i].name + " to Player");
 	}
 	
+	array_push(obj_player_battle.item, "Back");
+	
 	//Spawns Displays
 	show_debug_message("Displays--------------------");
 	for(i = 0; i < array_length(display_spawn); i++){

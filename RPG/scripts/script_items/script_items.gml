@@ -1,3 +1,5 @@
+//these are inseperate places to decrease confusion when adding more, trust me, it's fine
+
 /// @function use_item_damage(item, target_array);
 /// @param {item} item - the item to be used
 /// @param {list} target_array the array of targets

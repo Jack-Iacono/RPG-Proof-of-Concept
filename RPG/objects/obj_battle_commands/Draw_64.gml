@@ -19,9 +19,8 @@ switch(section){
 		text_array = magic;
 		break;
 	case 5:
-		//print_menu_battle_varied_elements(item, text_spacing, text_x, text_y, cursor_opt, text_color1, text_color2, text_color3);
-		print_menu_battle_varied_elements(item, text_spacing, text_x, text_y, cursor_opt, text_color1, text_color2, text_color3);
-		text_array = item;
+		print_menu_battle_varied_elements(obj_player_battle.item, text_spacing, text_x, text_y, cursor_opt, text_color1, text_color2, text_color3);
+		text_array = obj_player_battle.item;
 		break;
 	case 6:
 		if(selections = 3){
