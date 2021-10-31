@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Walls",
-    "path": "folders/Sprites/Overworld Sprites/Walls.yy",
+    "name": "Wall Markers",
+    "path": "folders/Sprites/Overworld Sprites/Wall Markers.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_wall_default",
