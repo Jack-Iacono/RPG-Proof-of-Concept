@@ -11,7 +11,7 @@ I made this mostly to tinker with various elements which are only found in RPGs 
 - Enter to select options
 
 ## Main Features
-- Large overworld (As of release V1.0.0 it is largely barren)
+- Large overworld (As of release V0.2.0 it is largely barren)
 - Enemies which roam the fields 
 - Randomized Encounters with enemies of varying types
 - Magic and Physical attacks
